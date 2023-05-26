@@ -1,0 +1,10 @@
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>ct", vim.cmd.CloakToggle)
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+vim.keymap.set("n", "<space><space>", "<cmd>:NvimTreeToggle<cr>", { desc = "Open nvim-tree" })
+
+vim.keymap.set("n", "<C-h>", vim.cmd.NvimTmuxNavigateLeft)
+vim.keymap.set("n", "<C-j>", vim.cmd.NvimTmuxNavigateDown)
+vim.keymap.set("n", "<C-k>", vim.cmd.NvimTmuxNavigateUp)
+vim.keymap.set("n", "<C-l>", vim.cmd.NvimTmuxNavigateRight)

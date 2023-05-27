@@ -115,6 +115,7 @@ alias ls="colorls"
 export PATH="$HOME/.local/bin:$PATH"
 
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^q "tmux-cht.sh\n"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

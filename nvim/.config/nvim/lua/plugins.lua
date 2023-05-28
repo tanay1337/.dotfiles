@@ -3,7 +3,6 @@
 require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-treesitter/nvim-treesitter")
-	use("akinsho/toggleterm.nvim")
 	use("windwp/nvim-autopairs")
 	use("mhartington/formatter.nvim")
 	use("numToStr/Comment.nvim")
@@ -42,16 +41,6 @@ require("packer").startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("alpha").setup(require("alpha.themes.startify").config)
-		end,
-	})
-
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional
-		},
-		config = function()
-			require("nvim-tree").setup({})
 		end,
 	})
 
@@ -99,10 +88,6 @@ require("packer").startup(function(use)
 	})
 end)
 
-require("nvim-tree").setup({
-	sync_root_with_cwd = true,
-})
-
 require("luatab").setup()
 require("telescope").setup()
 require("nvim-autopairs").setup()
@@ -137,12 +122,6 @@ require("gitsigns").setup({
 		topdelete = { text = "➤" },
 		changedelete = { text = "▎" },
 	},
-})
-
-require("toggleterm").setup({
-	open_mapping = "<C-g>",
-	direction = "horizontal",
-	shade_terminals = true,
 })
 
 require("onedark").setup({

@@ -25,3 +25,9 @@ vim.keymap.set("n", "<C-l>", vim.cmd.NvimTmuxNavigateRight)
 
 -- Tmux-sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>:silent !tmux neww tmux-sessionizer<cr>")
+
+-- chmod a current executable file
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- copy to system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])

@@ -13,6 +13,9 @@ require("packer").startup(function(use)
 	use("laytan/cloak.nvim")
 	use("mfussenegger/nvim-dap")
 
+	-- for some practive
+	use("ThePrimeagen/vim-be-good")
+
 	use({
 		"alexghergh/nvim-tmux-navigation",
 		config = function()

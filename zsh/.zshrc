@@ -117,6 +117,11 @@ export PATH="$HOME/.local/bin:$PATH"
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^q "tmux-cht.sh\n"
 
+fcd () {
+  selected=$(find ~ ~/code ~/.dotfiles -mindepth 1 -maxdepth 1 -type d | fzf)
+  cd "$selected"
+}
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

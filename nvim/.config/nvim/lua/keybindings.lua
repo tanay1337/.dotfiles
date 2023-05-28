@@ -1,9 +1,17 @@
 -- Set leader
-vim.g.mapleader=" "
+vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<leader>ct", vim.cmd.CloakToggle)
+
+-- Tabs
+vim.keymap.set("n", "<leader>ta", ":tabnew<cr>")
+vim.keymap.set("n", "<leader>tc", ":tabclose<cr>")
+vim.keymap.set("n", "<leader>tn", ":tabn<cr>")
+vim.keymap.set("n", "<leader>tp", ":tabp<cr>")
+vim.keymap.set("n", "<leader>tmn", ":+tabmove<cr>")
+vim.keymap.set("n", "<leader>tmp", ":-tabmove<cr>")
 
 -- Telescope search
 vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files<cr>")

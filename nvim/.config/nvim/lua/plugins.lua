@@ -113,6 +113,7 @@ require("nvim-treesitter.configs").setup({
 		"json",
 		"lua",
 		"rust",
+		"go",
 		"vim",
 	},
 })

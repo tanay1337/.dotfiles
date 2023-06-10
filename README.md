@@ -13,10 +13,7 @@ xcode-select --install
 git clone https://github.com/tanay1337/.dotfiles.git
 cd .dotfiles
 brew bundle install
-stow zsh
-stow bin
-stow nvim
-stow tmux
+stow zsh bin nvim tmux
 ```
 
 ## Credits

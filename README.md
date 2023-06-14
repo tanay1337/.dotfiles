@@ -13,7 +13,12 @@ xcode-select --install
 git clone https://github.com/tanay1337/.dotfiles.git
 cd .dotfiles
 brew bundle install
-stow zsh bin nvim tmux
+stow zsh bin nvim tmux mutt
+```
+
+3. Generate a new [application password](https://support.google.com/accounts/answer/185833?hl=en#zippy=%2Cwhy-you-may-need-an-app-password) for Gmail. Run the following command:
+```
+security add-generic-password -U -a EMAIL -s mutt -w APP_PASSWORD
 ```
 
 ## Credits

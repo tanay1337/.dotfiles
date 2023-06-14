@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 alias python="python3"
 alias pip="pip3"
 alias vim="nvim"
+alias mutt="neomutt"
 alias ls="colorls"
 
 export PATH="$HOME/.local/bin:$PATH"

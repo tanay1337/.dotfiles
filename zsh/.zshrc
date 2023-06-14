@@ -111,6 +111,7 @@ alias python="python3"
 alias pip="pip3"
 alias vim="nvim"
 alias mutt="neomutt"
+alias todo="dooit"
 alias ls="colorls"
 
 export PATH="$HOME/.local/bin:$PATH"

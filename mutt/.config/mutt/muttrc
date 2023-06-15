@@ -36,7 +36,7 @@ set status_chars = " *%A"
 set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%>─%?p?( %p postponed )?"
 
 set spoolfile = "+INBOX"
-set record = "+[Gmail]/Sent Mail"
+#set record = "+[Gmail]/Sent Mail"
 set postponed = "+[Gmail]/Drafts"
 
 # Setting for sidebar

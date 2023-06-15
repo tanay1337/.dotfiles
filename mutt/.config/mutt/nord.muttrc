@@ -25,3 +25,11 @@ color quoted2		blue default
 color quoted3		green default
 color quoted4		yellow default
 color quoted5		red default
+
+# Custom stuff
+color sidebar_divider brightblue default
+color index_author blue default
+color index_number brightblue default
+color index_date brightblack default
+color index_subject white default
+color index_size brightblack default

@@ -22,7 +22,13 @@ set from = ${my_email}
 set realname = "Tanay Pant"
 set reply_to
 set include
-set mail_check = 6
+set mail_check = 60
+set date_format="%h %d, %I:%M%p"
+set index_format="%2C %Z %?X?A& ? %D %-25.25F %s"
+set sleep_time = 0
+set markers = no
+set mark_old = no
+set wait_key = no
 
 # Status Bar
 set status_on_top
@@ -35,6 +41,9 @@ set postponed = "+[Gmail]/Drafts"
 
 # Setting for sidebar
 set sidebar_visible
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
 set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
 
@@ -43,5 +52,12 @@ set sort=reverse-date
 set sort_aux=last-date-received
 
 set mailcap_path = "~/.config/mutt/mailcap"
+set signature = "~/.config/mutt/signature"
+set attach_save_dir = "~/Downloads/"
+set attach_save_without_prompting = yes
 
-source nord.muttrc
+# Source the nord theme
+source "~/.config/mutt/nord.muttrc"
+
+# Source the keybindings
+source "~/.config/mutt/keybindings"

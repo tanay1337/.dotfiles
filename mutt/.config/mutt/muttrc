@@ -23,8 +23,8 @@ set realname = "Tanay Pant"
 set reply_to
 set include
 set mail_check = 60
-set date_format="%h %d, %I:%M%p"
-set index_format="%2C %Z %?X?A& ? %D %-25.25F %s"
+set date_format="%h %d, %I:%M %p"
+set index_format="%2C %Z %?X?A& ? %-25.25F %s%* %D"
 set sleep_time = 0
 set markers = no
 set mark_old = no

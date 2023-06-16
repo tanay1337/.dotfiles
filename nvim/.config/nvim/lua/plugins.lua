@@ -12,6 +12,12 @@ require("packer").startup(function(use)
 	use("mbbill/undotree")
 	use("laytan/cloak.nvim")
 	use("mfussenegger/nvim-dap")
+	use("sbdchd/neoformat")
+
+	use({
+		"kosayoda/nvim-lightbulb",
+		requires = "antoinemadec/FixCursorHold.nvim",
+	})
 
 	-- for some practive
 	use("ThePrimeagen/vim-be-good")
@@ -98,6 +104,7 @@ require("guess-indent").setup()
 require("Comment").setup()
 require("mason").setup()
 require("mason-lspconfig").setup()
+require("nvim-lightbulb").setup({ autocmd = { enabled = true } })
 
 require("nvim-treesitter.configs").setup({
 	highlight = {

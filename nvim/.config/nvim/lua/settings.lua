@@ -21,3 +21,6 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.mouse = "a"
+
+-- Format on save
+vim.cmd([[autocmd BufWritePre * undojoin | Neoformat ]])

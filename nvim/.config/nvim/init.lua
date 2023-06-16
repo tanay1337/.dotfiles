@@ -1,7 +1,5 @@
 require("plugins")
 require("settings")
 require("keybindings")
-require("format")
-require("auto")
 require("lsp")
 require("evil_lualine")

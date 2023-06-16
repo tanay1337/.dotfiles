@@ -14,8 +14,18 @@ vim.keymap.set("n", "<leader>tmn", ":+tabmove<cr>")
 vim.keymap.set("n", "<leader>tmp", ":-tabmove<cr>")
 
 -- Telescope search
-vim.keymap.set("n", "<leader>pf", "<cmd>Telescope find_files<cr>")
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>")
 vim.keymap.set("n", "<C-p>", "<cmd>Telescope git_files<cr>")
+
+-- Keep cursor in middle when jumping half pages with C-d and C-u
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Format document
+vim.keymap.set("n", "<leader>fd", function()
+	vim.lsp.buf.format({ async = true })
+end, { desc = "Format document" })
 
 -- Tmux Navigation
 vim.keymap.set("n", "<C-h>", vim.cmd.NvimTmuxNavigateLeft)

@@ -56,6 +56,9 @@ set signature = "~/.config/mutt/signature"
 set attach_save_dir = "~/Downloads/"
 set attach_save_without_prompting = yes
 
+# Autocomplete emails
+set query_command = "khard email --parsable --search-in-source-files '%s'"
+
 # Source the nord theme
 source "~/.config/mutt/nord.muttrc"
 

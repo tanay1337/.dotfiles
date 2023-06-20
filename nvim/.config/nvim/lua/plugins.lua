@@ -13,6 +13,7 @@ require("packer").startup(function(use)
 	use("laytan/cloak.nvim")
 	use("mfussenegger/nvim-dap")
 	use("sbdchd/neoformat")
+	use("nvim-treesitter/playground")
 
 	use({
 		"kosayoda/nvim-lightbulb",

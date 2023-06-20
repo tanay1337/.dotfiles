@@ -18,6 +18,9 @@ vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>")
 vim.keymap.set("n", "<C-p>", "<cmd>Telescope git_files<cr>")
 
+-- Treesitter playground toggle
+vim.keymap.set("n", "<leader>pt", ":TSPlaygroundToggle<cr>")
+
 -- Keep cursor in middle when jumping half pages with C-d and C-u
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")

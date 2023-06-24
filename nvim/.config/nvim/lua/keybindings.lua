@@ -2,7 +2,6 @@
 vim.g.mapleader = " "
 
 -- For GitHub Copilot
-vim.g.copilot_assume_mapped = true
 vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>")
 vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>")
 

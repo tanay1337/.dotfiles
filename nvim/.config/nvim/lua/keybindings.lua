@@ -1,6 +1,11 @@
 -- Set leader
 vim.g.mapleader = " "
 
+-- For GitHub Copilot
+vim.g.copilot_assume_mapped = true
+vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>")
+vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>")
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<leader>ct", vim.cmd.CloakToggle)

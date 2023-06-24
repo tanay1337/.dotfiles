@@ -22,5 +22,8 @@ vim.opt.termguicolors = true
 
 vim.opt.mouse = "a"
 
+-- Disable Copilot by default
+vim.g.copilot_enabled = false
+
 -- Format on save
 vim.cmd([[autocmd BufWritePre * undojoin | Neoformat ]])

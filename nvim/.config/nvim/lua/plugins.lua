@@ -15,6 +15,8 @@ require("packer").startup(function(use)
 	use("sbdchd/neoformat")
 	use("nvim-treesitter/playground")
 
+	use("github/copilot.vim")
+
 	use({
 		"kosayoda/nvim-lightbulb",
 		requires = "antoinemadec/FixCursorHold.nvim",

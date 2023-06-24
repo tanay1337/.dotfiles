@@ -22,7 +22,24 @@ require("packer").startup(function(use)
 		requires = "antoinemadec/FixCursorHold.nvim",
 	})
 
-	-- for some practive
+	use({
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		config = function()
+			require("tailwindcss-colorizer-cmp").setup({
+				color_square_width = 4,
+			})
+		end,
+	})
+
+	use({
+		"CosmicNvim/cosmic-ui",
+		requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("cosmic-ui").setup()
+		end,
+	})
+
+	-- for some practice
 	use("ThePrimeagen/vim-be-good")
 
 	use({
@@ -78,24 +95,29 @@ require("packer").startup(function(use)
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
-		branch = "v1.x",
+		branch = "v2.x",
 		requires = {
 			-- LSP Support
-			{ "neovim/nvim-lspconfig" },
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{
+				-- Optional
+				"williamboman/mason.nvim",
+				run = function()
+					pcall(vim.cmd, "MasonUpdate")
+				end,
+			},
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
 			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-buffer" },
-			{ "hrsh7th/cmp-path" },
-			{ "saadparwaiz1/cmp_luasnip" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/cmp-nvim-lua" },
-
-			-- Snippets
-			{ "L3MON4D3/LuaSnip" },
-			{ "rafamadriz/friendly-snippets" },
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "hrsh7th/cmp-buffer" }, -- Required
+			{ "hrsh7th/cmp-path" }, -- Required
+			{ "hrsh7th/cmp-cmdline" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
+			{ "saadparwaiz1/cmp_luasnip" }, -- Required
+			{ "rafamadriz/friendly-snippets" }, -- Required
+			{ "onsails/lspkind-nvim" }, -- Required
 		},
 	})
 end)

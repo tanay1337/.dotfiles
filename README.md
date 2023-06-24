@@ -39,3 +39,4 @@ I got my config inspiration from the following repositories:
 - https://github.com/cpow/cpow-dotfiles
 - https://github.com/ParthPant/dotfiles
 - https://github.com/elijahmanor/dotfiles
+- https://github.com/nikolovlazar/dotfiles

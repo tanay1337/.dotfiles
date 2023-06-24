@@ -20,6 +20,13 @@ lsp.set_preferences({
 	suggest_lsp_servers = false,
 })
 
+lsp.set_sign_icons({
+	error = "✘",
+	warn = "▲",
+	hint = "⚑",
+	info = "»",
+})
+
 ---@diagnostic disable-next-line: unused-local
 lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "gd", function()

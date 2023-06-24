@@ -22,6 +22,13 @@ require("packer").startup(function(use)
 	})
 
 	use({
+		"nvim-tree/nvim-tree.lua",
+		requires = {
+			"nvim-tree/nvim-web-devicons", -- optional
+		},
+	})
+
+	use({
 		"roobert/tailwindcss-colorizer-cmp.nvim",
 		config = function()
 			require("tailwindcss-colorizer-cmp").setup({
@@ -156,6 +163,19 @@ require("gitsigns").setup({
 		delete = { text = "➤" },
 		topdelete = { text = "➤" },
 		changedelete = { text = "▎" },
+	},
+})
+
+require("nvim-tree").setup({
+	sort_by = "case_sensitive",
+	view = {
+		width = 25,
+	},
+	renderer = {
+		group_empty = true,
+	},
+	filters = {
+		dotfiles = false,
 	},
 })
 

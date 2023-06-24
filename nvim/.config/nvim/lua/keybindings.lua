@@ -6,6 +6,7 @@ vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>")
 vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>")
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>nt", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<leader>ct", vim.cmd.CloakToggle)
 
@@ -43,8 +44,11 @@ vim.keymap.set("n", "<C-l>", vim.cmd.NvimTmuxNavigateRight)
 -- Tmux-sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>:silent !tmux neww tmux-sessionizer<cr>")
 
+-- Language/command query
+vim.keymap.set("n", "<C-q>", "<cmd>:silent !tmux neww tmux-cht.sh<cr>")
+
 -- chmod a current executable file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- copy to system clipboard
+-- Copy to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])

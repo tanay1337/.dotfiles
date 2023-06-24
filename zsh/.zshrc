@@ -113,6 +113,7 @@ alias vim="nvim"
 alias mutt="neomutt"
 alias todo="dooit"
 alias ls="colorls"
+alias cat="bat"
 
 export PATH="$HOME/.local/bin:$PATH"
 

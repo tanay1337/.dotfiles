@@ -14,6 +14,8 @@ require("packer").startup(function(use)
 	use("sbdchd/neoformat")
 	use("nvim-treesitter/playground")
 
+	use("vimwiki/vimwiki")
+
 	use("github/copilot.vim")
 
 	use({

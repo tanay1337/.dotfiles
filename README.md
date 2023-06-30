@@ -1,5 +1,9 @@
 # My Configuration ✨
 
+Here's a preview of how my setup looks:
+
+<img src="https://i.imgur.com/bEpKQQF.png" width="500" /> <img src="https://i.imgur.com/9ZQpWuX.jpeg" width="500" />
+
 1. Install [Brew](https://brew.sh/) and `xcode-select`.
 
 ```

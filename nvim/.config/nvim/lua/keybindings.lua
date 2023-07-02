@@ -45,10 +45,10 @@ vim.keymap.set("n", "<C-k>", vim.cmd.NvimTmuxNavigateUp)
 vim.keymap.set("n", "<C-l>", vim.cmd.NvimTmuxNavigateRight)
 
 -- Tmux-sessionizer
-vim.keymap.set("n", "<C-f>", "<cmd>:silent !tmux neww tmux-sessionizer<cr>")
+vim.keymap.set("n", "<C-f>", "<cmd>:silent !tmux display-popup -E 'tmux-sessionizer'<cr>")
 
 -- Language/command query
-vim.keymap.set("n", "<C-q>", "<cmd>:silent !tmux neww tmux-cht.sh<cr>")
+vim.keymap.set("n", "<C-q>", "<cmd>:silent !tmux display-popup -E 'tmux-cht.sh'<cr>")
 
 -- chmod a current executable file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })

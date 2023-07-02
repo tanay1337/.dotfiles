@@ -114,11 +114,12 @@ alias vim="nvim"
 alias mutt="neomutt"
 alias ls="colorls"
 alias cat="bat"
+alias play="tmux display-popup -E 'play'"
 
 export PATH="$HOME/.local/bin:$PATH"
 
-bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s ^q "tmux-cht.sh\n"
+bindkey -s ^f "tmux display-popup -E 'tmux-sessionizer'\n"
+bindkey -s ^q "tmux display-popup -E 'tmux-cht.sh'\n"
 bindkey -s ^g "lazygit\n"
 
 export EDITOR=nvim

@@ -10,6 +10,9 @@ vim.keymap.set("n", "<leader>nt", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 vim.keymap.set("n", "<leader>ct", vim.cmd.CloakToggle)
 
+-- LazyGit
+vim.keymap.set("n", "<leader>gg", ":LazyGit<cr>")
+
 -- Tabs
 vim.keymap.set("n", "<leader>ta", ":tabnew<cr>")
 vim.keymap.set("n", "<leader>tc", ":tabclose<cr>")

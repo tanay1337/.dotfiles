@@ -13,6 +13,15 @@ font:
   normal:
     family: "Hack Nerd Font"
     style: Regular
+  italic:
+    family: "Hack Nerd Font"
+    style: Italic
+  bold:
+    family: "Hack Nerd Font"
+    style: Bold
+  bold_italic:
+    family: "Hack Nerd Font"
+    style: Bold Italic
   size: 15
 
 draw_bold_text_with_bright_colors: true

@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias python="python3"
 alias pip="pip3"
+alias vi="nvim"
 alias vim="nvim"
 alias mutt="neomutt"
 alias ls="colorls"
@@ -118,11 +119,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^q "tmux-cht.sh\n"
-
-fcd () {
-  selected=$(find ~ ~/code ~/.dotfiles -mindepth 1 -maxdepth 1 -type d | fzf)
-  cd "$selected"
-}
+bindkey -s ^g "lazygit\n"
 
 export EDITOR=nvim
 export VISUAL="$EDITOR"
@@ -135,4 +132,5 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"

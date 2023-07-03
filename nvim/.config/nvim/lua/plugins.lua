@@ -89,12 +89,7 @@ require("packer").startup(function(use)
 		end,
 	})
 
-	use({
-		"alvarosevilla95/luatab.nvim",
-		requires = {
-			"kyazdani42/nvim-web-devicons",
-		},
-	})
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
 	use({
 		"utilyre/barbecue.nvim",
@@ -138,7 +133,26 @@ require("packer").startup(function(use)
 	})
 end)
 
-require("luatab").setup()
+require("bufferline").setup({
+	options = {
+		mode = "tabs",
+		themable = true,
+		always_show_bufferline = false,
+		indicator = {
+			icon = "▎",
+			style = "icon",
+		},
+		offsets = {
+			{
+				filetype = "NvimTree",
+				text = "File Explorer",
+				text_align = "center",
+				separator = true,
+			},
+		},
+	},
+})
+
 require("telescope").setup()
 require("nvim-autopairs").setup()
 require("guess-indent").setup()

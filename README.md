@@ -8,7 +8,6 @@ Here's a preview of how my setup looks:
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-xcode-select --install
 ```
 
 2. In the home folder, run the following command (to be replaced with ansible):

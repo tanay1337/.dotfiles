@@ -4,10 +4,11 @@ Here's a preview of how my setup looks:
 
 <img src="https://i.imgur.com/bEpKQQF.png" width="500" /> <img src="https://i.imgur.com/9ZQpWuX.jpeg" width="500" />
 
-1. Install [Brew](https://brew.sh/) and `xcode-select`.
+1. Install [Brew](https://brew.sh/).
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.zshrc
 ```
 
 2. In the home folder, run the following command (to be replaced with ansible):

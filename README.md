@@ -45,3 +45,4 @@ I got my config inspiration from the following repositories:
 - https://github.com/ParthPant/dotfiles
 - https://github.com/elijahmanor/dotfiles
 - https://github.com/nikolovlazar/dotfiles
+- https://github.com/josean-dev/dev-environment-files

@@ -46,3 +46,4 @@ I got my config inspiration from the following repositories:
 - https://github.com/elijahmanor/dotfiles
 - https://github.com/nikolovlazar/dotfiles
 - https://github.com/josean-dev/dev-environment-files
+- https://github.com/joshmedeski 

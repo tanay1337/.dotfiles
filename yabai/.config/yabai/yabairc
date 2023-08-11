@@ -5,6 +5,9 @@ yabai -m config layout bsp
 # New window spawns to the right if vertical split, or bottom if horizontal split
 yabai -m config window_placement second_child
 
+# Readjust size of windows to auto balance
+yabai -m config auto_balance on
+
 # Padding
 yabai -m config top_padding 25
 yabai -m config bottom_padding 25
@@ -14,6 +17,9 @@ yabai -m config window_gap 12
 
 # Center mouse on window with focus
 yabai -m config mouse_follows_focus on
+
+# Focus follows mouse and autoraises the focussed window
+yabai -m config focus_follows_mouse autoraise
 
 # Modifier for clicking and dragging with mouse
 yabai -m config mouse_modifier alt
@@ -28,3 +34,4 @@ yabai -m mouse_drop_action swap
 # Disable specific apps
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off

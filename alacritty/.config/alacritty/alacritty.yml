@@ -1,7 +1,7 @@
 live_config_reload: true
 
 window:
-  opacity: 0.9
+  opacity: 0.85
   padding:
     x: 5
     y: 5

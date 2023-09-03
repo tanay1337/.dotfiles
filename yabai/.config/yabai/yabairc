@@ -15,6 +15,14 @@ yabai -m config left_padding 25
 yabai -m config right_padding 25
 yabai -m config window_gap 12
 
+# Window borders
+yabai -m config window_border on
+yabai -m config window_border_width 1
+yabai -m config active_window_border_color 0xff1F51FF
+yabai -m config normal_window_border_color 0xff000370
+
+yabai -m window --toggle border
+
 # Center mouse on window with focus
 yabai -m config mouse_follows_focus on
 

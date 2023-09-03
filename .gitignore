@@ -1,4 +1,4 @@
-nvim/.config/nvim/plugin
-tmux/.config/tmux/plugins
-tmux-min/.config/tmux/plugins
-bin/.local
+macOS/nvim/.config/nvim/plugin
+macOS/tmux/.config/tmux/plugins
+legacy/tmux/.config/tmux/plugins
+macOS/bin/.local

@@ -1,16 +1,12 @@
 # My Configuration ✨
 
-Here's a preview of how my setup looks:
-
-## With tmux-min
+Here's a preview of how my setup looks like in macOS.
 
 <img src="https://i.imgur.com/eWBmH7L.jpeg" width="500" />
 
-## With tmux
-
-<img src="https://i.imgur.com/bEpKQQF.png" width="500" /> <img src="https://i.imgur.com/9ZQpWuX.jpeg" width="500" />
-
 ## Setup 
+
+### macOS
 
 1. Install [Brew](https://brew.sh/) and [Oh My Zsh](https://ohmyz.sh/).
 
@@ -24,7 +20,7 @@ echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.zshrc
 
 ```
 git clone https://github.com/tanay1337/.dotfiles.git
-cd .dotfiles
+cd .dotfiles/macOS
 brew bundle install
 stow alacritty zsh bin nvim tmux mutt khard
 ```

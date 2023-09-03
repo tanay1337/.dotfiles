@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-pmset -g batt | grep -Eo "\d+%"

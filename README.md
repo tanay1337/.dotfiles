@@ -6,7 +6,7 @@ Preview of my setup on Arch.
 
 Preview of my setup on macOS.
 
-<img src="https://i.imgur.com/eWBmH7L.jpeg" width="500" />
+<img src="https://i.imgur.com/aGJecUZ.png" width="500" />
 
 ## Setup 
 

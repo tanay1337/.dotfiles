@@ -1,6 +1,10 @@
 # My Configuration ✨
 
-Here's a preview of how my setup looks like in macOS.
+Preview of my setup on Arch.
+
+<img src="https://i.imgur.com/QsPYsnl.png" width="500" />
+
+Preview of my setup on macOS.
 
 <img src="https://i.imgur.com/eWBmH7L.jpeg" width="500" />
 

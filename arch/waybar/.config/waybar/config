@@ -1,0 +1,31 @@
+{
+    "height": 28,
+    "modules-left": [
+        "custom/launcher",
+    ],
+    "modules-center": [
+        "wlr/workspaces"
+    ],
+    "modules-right": [
+        "memory",
+        "cpu",
+        "battery",
+        "clock"
+    ],
+    "custom/launcher": {
+        "format": "󰣇",
+        "icon-size": 24
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "cpu": {
+       "format": " {usage}%"
+    },
+    "battery": {
+        "format": " {capacity}%"
+    },
+    "clock": {
+        "format": " {:%I:%M %p}"
+    }
+}

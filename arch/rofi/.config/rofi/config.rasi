@@ -1,0 +1,56 @@
+configuration {
+    display-drun: "Applications";
+    display-window: "Windows";
+    drun-display-format: "{name}";
+    font: "Hack Nerd Font Regular 12";
+    show-icons: true;
+    modi: "window,run,drun";
+}
+
+window {
+    width: 800px;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+element {
+    padding: 6;
+}
+
+element-text selected {
+    text-color: #ffffff;
+}
+
+element-icon {
+    size: 24px;
+}
+
+prompt {
+    text-color: #ffffff;
+}
+
+entry {
+    text-color: #ffffff;
+}
+
+listview {
+    enabled:                     true;
+    lines:                       10;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     5px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                #000000;
+    background-color:            transparent;
+    text-color:                  #ffffff;
+    cursor:                      "default";
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+selected=$(find ~/Music/local -type f | tr " " "\ " | fzf)
+selected_name=$(basename "$selected")
+
+afplay_running=$(pgrep afplay)
+
+if [[ $afplay_running ]]; then
+    kill -9 $afplay_running
+fi
+
+tmux neww -n $selected_name -d bash -c "echo "Playing..."; afplay $selected; sleep 1"

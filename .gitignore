@@ -1,4 +1,5 @@
 macOS/nvim/.config/nvim/plugin
 macOS/tmux/.config/tmux/plugins
 legacy/tmux/.config/tmux/plugins
-macOS/bin/.local
+macOS/bin/.local/share
+macOS/bin/.local/state

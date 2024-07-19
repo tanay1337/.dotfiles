@@ -23,6 +23,10 @@ bindkey -s ^f "tmux display-popup -E 'tmux-sessionizer'\n"
 bindkey -s ^q "tmux display-popup -E 'tmux-cht.sh'\n"
 bindkey -s ^g "lazygit\n"
 
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 export PATH="$HOME/.cargo/bin:$HOME/.local/bin:/opt/homebrew/bin:$PATH"

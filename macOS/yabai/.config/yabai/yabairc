@@ -8,8 +8,10 @@ yabai -m config window_placement second_child
 # Readjust size of windows to auto balance
 yabai -m config auto_balance on
 
+# Conditional top padding based on display
+yabai -m signal --add event=display_changed action="python3 ~/.config/yabai/set_padding.py"
+
 # Padding
-yabai -m config top_padding 25
 yabai -m config bottom_padding 25
 yabai -m config left_padding 25
 yabai -m config right_padding 25

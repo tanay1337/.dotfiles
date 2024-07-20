@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if yabai -m query --displays | grep -q '1920'; then
+    yabai -m config top_padding 55
+else
+    yabai -m config top_padding 25
+fi

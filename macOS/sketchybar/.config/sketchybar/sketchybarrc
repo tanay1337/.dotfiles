@@ -53,7 +53,7 @@ sketchybar --add item clock right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
            --add item kanji right \
-           --set kanji update_freq=3600 script="$PLUGIN_DIR/kanji.sh" click_script="sketchybar -m --set kanji popup.drawing=toggle" popup.background.border_width=1 popup.background.corner_radius=3 popup.background.border_color=0xff000370 popup.align="center" popup.background.color=0x40000000 popup.blur_radius=30 
+           --set kanji update_freq=3600 script="$PLUGIN_DIR/kanji.sh" click_script="sketchybar -m --set kanji popup.drawing=toggle" popup.background.corner_radius=3 popup.background.color=0x40000000 popup.blur_radius=30 
 
 ##### Hotload on config changes #####
 sketchybar --hotload on

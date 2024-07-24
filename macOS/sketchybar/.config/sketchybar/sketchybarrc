@@ -7,8 +7,8 @@ sketchybar --bar position=top height=35 blur_radius=30 color=0x40000000
 default=(
   padding_left=5
   padding_right=5
-  icon.font="SF Symbols Font:Bold:14.0"
-  label.font="SF Pro Font:Bold:14.0"
+  icon.font="SF Symbols:Bold:14.0"
+  label.font="SF Pro:Normal:13.0"
   icon.color=0xffffffff
   label.color=0xffffffff
   icon.padding_left=4
@@ -51,7 +51,9 @@ sketchybar --add item clock right \
            --subscribe volume volume_change \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-           --subscribe battery system_woke power_source_change
+           --subscribe battery system_woke power_source_change \
+           --add item kanji right \
+           --set kanji update_freq=3600 script="$PLUGIN_DIR/kanji.sh" click_script="sketchybar -m --set kanji popup.drawing=toggle" popup.background.border_width=1 popup.background.corner_radius=3 popup.background.border_color=0xff000370 popup.align="center" popup.background.color=0x40000000 popup.blur_radius=30 
 
 ##### Hotload on config changes #####
 sketchybar --hotload on

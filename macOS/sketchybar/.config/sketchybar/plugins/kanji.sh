@@ -22,12 +22,11 @@ sketchybar --set "$NAME" icon="􀫕" label=$character
 
 sketchybar --default background.padding_left=5 \
                      background.padding_right=5 \
-                     icon.padding_right=5 \
                      icon.font="SF Symbols:Bold:14.0" \
                      label.font="SF Pro:Normal:13.0" \
            --add item meaning popup.kanji \
-           --set meaning icon="􀛭" label="$meaning" \
+           --set meaning label="$meaning" \
            --add item kunyomi popup.kanji \
-           --set kunyomi icon="􁓕" label="$kunyomi" \
+           --set kunyomi label="$kunyomi" \
            --add item onyomi popup.kanji \
-           --set onyomi icon="􀤍" label="$onyomi"
+           --set onyomi label="$onyomi"

@@ -26,7 +26,8 @@
     },
     "custom/launcher": {
         "format": "{icon}",
-        "format-icons": ["󰣇"]
+        "format-icons": ["󰣇"],
+        "on-click": "wlogout"
     },
     "temperature": {
        "format": " {temperatureC}°C"

@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "pidof hyprlock || hyprlock -q",
+    "action" : "pidof hyprlock || hyprlock",
     "text" : "Lock",
     "keybind" : "l"
 }
@@ -24,13 +24,13 @@
 }
 {
     "label" : "suspend",
-    "action" : "systemctl suspend || loginctl suspend",
+    "action" : "hyprlock& systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
 {
     "label" : "hibernate",
-    "action" : "systemctl hibernate || loginctl hibernate",
+    "action" : "systemctl hibernate",
     "text" : "Hibernate",
     "keybind" : "h"
 }

@@ -23,30 +23,3 @@ export VISUAL="$EDITOR"
 
 eval "$(zoxide init zsh)"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

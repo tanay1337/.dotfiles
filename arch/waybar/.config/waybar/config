@@ -5,7 +5,7 @@
     "reload_style_on_change": true,
 
     // Order of the modules
-    "modules-left": ["custom/launcher"],
+    "modules-left": ["custom/launcher", "custom/kanji"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["temperature", "memory", "cpu", "battery", "pulseaudio", "clock"],
     "hyprland/workspaces": {
@@ -30,6 +30,12 @@
         "format-icons": ["󰣇"],
         "on-click": "wlogout",
         "tooltip": false
+    },
+    "custom/kanji": {
+        "format": "{}",
+        "escape": true,
+        "exec": "~/.local/bin/./kanji",
+        "interval": 1800
     },
     "temperature": {
        "format": "{icon} {temperatureC}°C",

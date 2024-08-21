@@ -1,5 +1,7 @@
 adobe-source-code-pro-fonts
 alacritty
+apple-fonts
+arc-gtk-theme
 base
 base-devel
 blueman
@@ -11,6 +13,8 @@ fastfetch
 ffmpegthumbnailer
 file-roller
 firefox-developer-edition
+fprintd
+fwupd
 git
 grim
 grub
@@ -21,11 +25,13 @@ hyprland
 hyprlock
 iwd
 lazygit
+libfprint
 linux
 linux-firmware
 man-db
 man-pages
 neovim
+network-manager-applet
 networkmanager
 nodejs
 npm
@@ -38,10 +44,12 @@ pipewire-alsa
 pipewire-audio
 pipewire-pulse
 playerctl
+qt5-wayland
 qt6-5compat
 qt6-declarative
 qt6-svg
 rofi-wayland
+rose-pine-cursor
 rose-pine-hyprcursor
 sddm
 simple-sddm-theme-git
@@ -58,6 +66,7 @@ tmux
 ttf-hack-nerd
 tumbler
 unzip
+usbutils
 vim
 waybar
 wireplumber

@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Hack Nerd Font";
+    font-family: SF Pro;
     font-size: 21px;
     min-height: 0;
 }
@@ -9,22 +9,25 @@
 window#waybar {
     background: rgba(43, 48, 59, 0.5);
     color: white;
-    transition-property: background-color;
-    transition-duration: .5s;
-    opacity: 1;
 }
 
-#window {
-    font-weight: bold;
-    font-family: "Ubuntu";
+.modules-left {
+    padding-left: 25px;
+}
+
+.modules-right {
+    padding-right: 25px;
 }
 
 #workspaces {
-    padding: 0 10px;
+    font-size: 23px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#launcher {
-    padding: 0 10px;
+#custom-launcher {
+    font-size: 30px;
+    padding-right: 10px;
 }
 
 #workspaces button {
@@ -35,9 +38,13 @@ window#waybar {
     font-weight: bold;
 }
 
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #ffffff;
+}
+
 #workspaces button.focused {
-    color: #c9545d;
-    border-top: 2px solid #c9545d;
+    border-bottom: 2px solid #ffffff;
 }
 
 #mode {
@@ -45,57 +52,12 @@ window#waybar {
     border-bottom: 3px solid white;
 }
 
-#clock, #temperature, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+#temperature, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
     padding: 0 5px;
     margin: 0 5px;
 }
 
 #clock {
-    font-weight: bold;
-}
-
-#battery {
-}
-
-#battery icon {
-    color: red;
-}
-
-#battery.charging {
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
-}
-
-#battery.warning:not(.charging) {
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#cpu {
-}
-
-#memory {
-}
-
-#network {
-}
-
-#network.disconnected {
-    background: #f53c3c;
-}
-
-#pulseaudio {
-}
-
-#pulseaudio.muted {
+    margin: 0 5px;
 }
 

@@ -17,6 +17,7 @@ bindkey -s ^g "lazygit\n"
 
 export EDITOR=nvim
 export VISUAL="$EDITOR"
+export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

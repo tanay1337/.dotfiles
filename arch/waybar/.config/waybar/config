@@ -1,7 +1,8 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar at the bottom of your screen
-    "height": 30, // Waybar height
+    "height": 36, // Waybar height
+    "reload_style_on_change": true,
 
     // Order of the modules
     "modules-left": ["custom/launcher"],
@@ -27,16 +28,19 @@
     "custom/launcher": {
         "format": "{icon}",
         "format-icons": ["󰣇"],
-        "on-click": "wlogout"
+        "on-click": "wlogout",
+        "tooltip": false
     },
     "temperature": {
-       "format": " {temperatureC}°C"
+       "format": "{icon} {temperatureC}°C",
+       "format-icons": ["􁏃", "􀇬", "􁏄"]
     },
     "memory": {
-        "format": " {}%"
+        "format": "{icon} {}%",
+        "format-icons": ["􀧖"]
     },
     "cpu": {
-       "format": " {usage}%"
+       "format": "􀫥 {usage}%"
     },
     "battery": {
        "interval": 60,
@@ -45,26 +49,24 @@
            "critical": 15
        },
        "format": "{icon} {capacity}%",
-       "format-icons": ["", "", "", "", ""],
+       "format-charging": "􀢋 {capacity}%",
+       "format-icons": ["􀛪", "􀛩", "􀺶", "􀺸", "􀛨"],
        "max-length": 25
-    },
-    "clock": {
-        "format": "{:%I:%M %p}"
     },
     "pulseaudio": {
         //"scroll-step": 1,
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "􀊣",
         "format-icons": {
             "headphones": "",
             "handsfree": "",
             "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
+            "default": ["􀊥", "􀊧", "􀊩"]
         },
         "on-click": "pavucontrol"
-    }
+    },
+    "clock": {
+        "format": "{:%a %d. %b %I:%M %p}"
+    },
 }

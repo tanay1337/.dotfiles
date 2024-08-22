@@ -10,6 +10,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias vi="nvim"
 alias vim="nvim"
+alias ls="eza --icons"
+alias pokemon="pokemon-colorscripts -r"
 
 bindkey -s ^f "tmux display-popup -E 'tmux-sessionizer'\n"
 bindkey -s ^q "tmux display-popup -E 'tmux-cht.sh'\n"

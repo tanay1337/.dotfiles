@@ -8,7 +8,10 @@ blueman
 bluez
 bluez-utils
 brightnessctl
+cava
+dunst
 efibootmgr
+eza
 fastfetch
 ffmpegthumbnailer
 file-roller
@@ -24,6 +27,7 @@ hypridle
 hyprland
 hyprlock
 iwd
+jq
 lazygit
 libfprint
 linux
@@ -44,6 +48,7 @@ pipewire-alsa
 pipewire-audio
 pipewire-pulse
 playerctl
+pokemon-colorscripts-git
 qt5-wayland
 qt6-5compat
 qt6-declarative
@@ -55,7 +60,6 @@ sddm
 simple-sddm-theme-git
 stow
 swappy
-swaync
 swww
 telegram-desktop
 texinfo
@@ -81,7 +85,6 @@ yay-debug
 zathura
 zathura-cb
 zathura-pdf-mupdf
-zoom
 zoxide
 zsh
 zsh-theme-powerlevel10k-git

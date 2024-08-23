@@ -21,6 +21,7 @@ file-roller
 firefox-developer-edition
 fprintd
 fwupd
+fzf
 git
 grim
 grub

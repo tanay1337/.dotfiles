@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-data=$(swww query)
-
-IFS=' '
-
-read -ra newarr <<< ${data}
-
-echo ${newarr[7]}

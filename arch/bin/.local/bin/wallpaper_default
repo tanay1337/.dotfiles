@@ -1,0 +1,7 @@
+#/usr/bin/env bash
+
+focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
+
+swww img -o $focused_monitor ~/Pictures/Wallpapers/Tokyo_Pink.png
+wal -i  ~/Pictures/Wallpapers/Tokyo_Pink.png
+pywalfox update

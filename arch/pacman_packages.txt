@@ -1,5 +1,6 @@
 adobe-source-code-pro-fonts
 alacritty
+amd-ucode
 apple-fonts
 arc-gtk-theme
 avizo
@@ -11,6 +12,7 @@ bluez-utils
 brightnessctl
 catppuccin-gtk-theme-macchiato
 cava
+cpupower
 efibootmgr
 eza
 fastfetch
@@ -51,10 +53,13 @@ pipewire-audio
 pipewire-pulse
 playerctl
 pokemon-colorscripts-git
+python-pywalfox
+pywal-16-colors
 qt5-wayland
 qt6-5compat
 qt6-declarative
 qt6-svg
+radeontop
 rofi-wayland
 rose-pine-cursor
 rose-pine-hyprcursor
@@ -76,6 +81,7 @@ unzip
 usbutils
 vim
 vlc
+vulkan-radeon
 waybar
 wireplumber
 wl-clipboard

@@ -2,14 +2,15 @@ adobe-source-code-pro-fonts
 alacritty
 apple-fonts
 arc-gtk-theme
+avizo
 base
 base-devel
 blueman
 bluez
 bluez-utils
 brightnessctl
+catppuccin-gtk-theme-macchiato
 cava
-dunst
 efibootmgr
 eza
 fastfetch
@@ -42,6 +43,7 @@ npm
 otf-font-awesome
 otf-ipafont
 pamixer
+papirus-icon-theme
 pavucontrol
 pipewire
 pipewire-alsa
@@ -58,6 +60,7 @@ rose-pine-cursor
 rose-pine-hyprcursor
 sddm
 simple-sddm-theme-git
+slurp
 stow
 swappy
 swww
@@ -72,9 +75,11 @@ tumbler
 unzip
 usbutils
 vim
+vlc
 waybar
 wireplumber
 wl-clipboard
+wl-screenrec
 wlogout
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland

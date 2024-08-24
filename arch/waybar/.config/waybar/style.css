@@ -38,9 +38,7 @@ window#waybar {
 
 #workspaces button {
     padding: 0 8px;
-    background: transparent;
     color: white;
-    border-top: 2px solid transparent;
     font-weight: bold;
 }
 
@@ -49,8 +47,8 @@ window#waybar {
     border-bottom: 2px solid #ffffff;
 }
 
-#workspaces button.focused {
-    border-bottom: 2px solid #ffffff;
+#workspaces button.active {
+    border-bottom: 1px solid #ffffff;
 }
 
 #mode {

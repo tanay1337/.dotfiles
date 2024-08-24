@@ -1,10 +1,6 @@
 -- Set leader
 vim.g.mapleader = " "
 
--- For GitHub Copilot
-vim.keymap.set("n", "<leader>cd", ":Copilot disable<cr>")
-vim.keymap.set("n", "<leader>ce", ":Copilot enable<cr>")
-
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>nt", vim.cmd.NvimTreeToggle)
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
@@ -39,10 +35,10 @@ vim.keymap.set("n", "<leader>fd", function()
 end, { desc = "Format document" })
 
 -- Tmux Navigation
-vim.keymap.set("n", "<C-h>", vim.cmd.NvimTmuxNavigateLeft)
-vim.keymap.set("n", "<C-j>", vim.cmd.NvimTmuxNavigateDown)
-vim.keymap.set("n", "<C-k>", vim.cmd.NvimTmuxNavigateUp)
-vim.keymap.set("n", "<C-l>", vim.cmd.NvimTmuxNavigateRight)
+-- vim.keymap.set("n", "<C-h>", vim.cmd.NvimTmuxNavigateLeft)
+-- vim.keymap.set("n", "<C-j>", vim.cmd.NvimTmuxNavigateDown)
+-- vim.keymap.set("n", "<C-k>", vim.cmd.NvimTmuxNavigateUp)
+-- vim.keymap.set("n", "<C-l>", vim.cmd.NvimTmuxNavigateRight)
 
 -- Tmux-sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>:silent !tmux display-popup -E 'tmux-sessionizer'<cr>")

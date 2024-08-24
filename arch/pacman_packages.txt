@@ -23,6 +23,7 @@ fprintd
 fwupd
 fzf
 git
+go-yq
 grim
 grub
 gvfs
@@ -38,6 +39,7 @@ linux
 linux-firmware
 man-db
 man-pages
+nautilus
 neovim
 network-manager-applet
 networkmanager
@@ -72,9 +74,6 @@ swappy
 swww
 telegram-desktop
 texinfo
-thunar
-thunar-archive-plugin
-thunar-volman
 tmux
 ttf-hack-nerd
 tumbler

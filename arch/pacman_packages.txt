@@ -10,6 +10,7 @@ blueman
 bluez
 bluez-utils
 brightnessctl
+btop
 catppuccin-gtk-theme-macchiato
 cava
 cpupower

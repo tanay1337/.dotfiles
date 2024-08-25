@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 alias vi="nvim"
 alias vim="nvim"
 alias ls="eza --icons"
+alias top="btop"
 alias pokemon="pokemon-colorscripts -r"
 alias record="wl-screenrec"
 

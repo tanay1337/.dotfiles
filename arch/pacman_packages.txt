@@ -38,6 +38,7 @@ lazygit
 libfprint
 linux
 linux-firmware
+mako
 man-db
 man-pages
 nautilus

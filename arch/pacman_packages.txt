@@ -13,7 +13,7 @@ brightnessctl
 btop
 catppuccin-gtk-theme-macchiato
 cava
-cpupower
+easyeffects
 efibootmgr
 eza
 fastfetch
@@ -58,6 +58,7 @@ pipewire-audio
 pipewire-pulse
 playerctl
 pokemon-colorscripts-git
+power-profiles-daemon
 python-pywalfox
 pywal-16-colors
 qt5-wayland

@@ -13,6 +13,7 @@ brightnessctl
 btop
 catppuccin-gtk-theme-macchiato
 cava
+cliphist
 easyeffects
 efibootmgr
 eza
@@ -41,6 +42,7 @@ linux-firmware
 mako
 man-db
 man-pages
+mpv
 nautilus
 neovim
 network-manager-applet
@@ -83,7 +85,6 @@ tumbler
 unzip
 usbutils
 vim
-vlc
 vulkan-radeon
 waybar
 wireplumber

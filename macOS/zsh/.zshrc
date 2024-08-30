@@ -14,6 +14,7 @@ alias ls="eza --icons"
 alias top="btop"
 alias pokemon="pokemon-colorscripts -r"
 alias record="wl-screenrec"
+alias ff="fastfetch"
 
 bindkey -s ^f "tmux display-popup -E 'tmux-sessionizer'\n"
 bindkey -s ^q "tmux display-popup -E 'tmux-cht.sh'\n"

@@ -3,6 +3,12 @@
 random_wallpaper=$(find ~/Pictures/Wallpapers -name "*.png" | sort -R | tail -n 1)
 focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
 
-swww img -o $focused_monitor ${random_wallpaper}
-wal -i ${random_wallpaper}
-pywalfox update
+if [-z "$1"]; then
+    swww img -o $focused_monitor ${random_wallpaper}
+    wal -i ${random_wallpaper}
+    pywalfox update
+else
+    swww img -o $focused_monitor ~/Pictures/Wallpapers/$1
+    wal -i ~/Pictures/Wallpapers/$1
+    pywalfox update
+fi

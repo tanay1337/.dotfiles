@@ -74,6 +74,7 @@ rose-pine-hyprcursor
 sddm
 simple-sddm-theme-git
 slurp
+smile
 stow
 swappy
 swww

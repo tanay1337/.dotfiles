@@ -48,6 +48,7 @@ neovim
 network-manager-applet
 networkmanager
 nodejs
+notejot
 npm
 otf-font-awesome
 otf-ipafont

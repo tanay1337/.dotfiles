@@ -25,6 +25,7 @@ fprintd
 fwupd
 fzf
 git
+gnome-calculator
 go-yq
 grim
 grub

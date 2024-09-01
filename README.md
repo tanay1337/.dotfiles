@@ -2,7 +2,9 @@
 
 Preview of my setup on Arch.
 
-<img src="https://i.imgur.com/QsPYsnl.png" width="500" />
+<img src="https://i.imgur.com/2M3PGeS.jpeg" width="500" />
+<img src="https://i.imgur.com/Q0fB7MC.jpeg" width="500" />
+<img src="https://i.imgur.com/AKgZTO5.jpeg" width="500" />
 
 Preview of my setup on macOS.
 

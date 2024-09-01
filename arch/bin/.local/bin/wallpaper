@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-random_wallpaper=$(find ~/Pictures/Wallpapers -name "*.png" -name "*.jpg" | sort -R | tail -n 1)
+random_wallpaper=$(find ~/Pictures/Wallpapers -name "*.png" -o -name "*.jpg" | sort -R | tail -n 1)
 focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
 
 if [ -z "$1" ]; then

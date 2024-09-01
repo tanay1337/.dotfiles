@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "~/.local/bin/./wallpaper_hyprlock && pidof hyprlock || hyprlock",
+    "action" : "pidof hyprlock || hyprlock",
     "text" : "Lock",
     "keybind" : "l"
 }

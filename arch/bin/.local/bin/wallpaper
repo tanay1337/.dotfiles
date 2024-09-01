@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 
-random_wallpaper=$(find ~/Pictures/Wallpapers -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" | sort -R | tail -n 1)
+wallpaper_directory="$HOME/Pictures/Wallpapers"
+wallpaper=$(swww query | cut -d ' ' -f8)
 focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
 
 if [ -z "$1" ]; then
     :
 elif [ "$1" == "--random" ]; then
-    swww img -o $focused_monitor ${random_wallpaper}
-    wal -i ${random_wallpaper}
-    pywalfox update
+    wallpaper=$(find $wallpaper_directory -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" | sort -R | tail -n 1)
 elif [ "$1" == "--default" ]; then
-    swww img -o $focused_monitor ~/Pictures/Wallpapers/Tokyo_Pink.png
-    wal -i  ~/Pictures/Wallpapers/Tokyo_Pink.png
-    pywalfox update
+    wallpaper="$wallpaper_directory/Tokyo_Pink.png"
 else
-    swww img -o $focused_monitor ~/Pictures/Wallpapers/$1
-    wal -i ~/Pictures/Wallpapers/$1
-    pywalfox update
+    wallpaper="$wallpaper_directory/${1}"
 fi
+
+swww img -o $focused_monitor ${wallpaper}
+wal -i ${wallpaper}
+pywalfox update
+sleep 1
+~/.local/bin/./wallpaper_hyprlock 

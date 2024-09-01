@@ -28,6 +28,7 @@ git
 gnome-calculator
 go-yq
 grim
+grimshot
 grub
 gvfs
 hyprcursor

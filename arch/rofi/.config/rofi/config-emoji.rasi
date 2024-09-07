@@ -1,0 +1,33 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Main Config - emoji */
+
+@import "~/.config/rofi/master-config.rasi" 
+
+/* ---- Entry ---- */
+entry {
+  width: 37%;
+  placeholder: "Search Emojis";
+}
+
+listview {
+  columns:       9;
+  lines:         7;
+  cycle:         true;
+  dynamic:       true;
+  layout:        vertical;
+  flow:          horizontal;
+  reverse:       false;
+  fixed-height:  true;
+  fixed-columns: true;
+}
+
+element {
+  orientation: vertical;
+}
+
+element-text {
+  vertical-align:   0.5;
+  horizontal-align: 0.5;
+  font:            "SF Pro 24";
+}
+

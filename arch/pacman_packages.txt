@@ -36,6 +36,7 @@ hyprlock
 jq
 lazygit
 libfprint
+libnotify
 linux
 linux-firmware
 lvm2
@@ -90,7 +91,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 yay
-yay-debug
 zathura
 zathura-cb
 zathura-pdf-mupdf

@@ -73,6 +73,25 @@
         "on-click": "pavucontrol"
     },
     "clock": {
-        "format": "{:%a %d. %b %I:%M %p}"
-    },
+        "format": "{:%a %d. %b %I:%M %p}",
+        "tooltip-format": "<span size='18pt'><tt>{calendar}</tt></span>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffffff'>{}</span>",
+                "days": "<span color='#ffead3'>{}</span>",
+                "weekdays": "<span color='#ffcc66'>{}</span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            },
+            "actions":  {
+                "on-click-right": "mode",
+                "on-scroll-up": "tz_up",
+                "on-scroll-down": "tz_down",
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+            }
+        }
+    }
 }

@@ -1,9 +1,6 @@
-# Select a random number between 1 and 80 (inclusive)
-random_number=$(jot -r 1 1 80)
-
 # Get the Kanji data
-kanji_data=$(curl -s http://ec2-13-60-36-124.eu-north-1.compute.amazonaws.com/api/v1/kanji/$random_number)
-echo $kanji_data
+random_file=$(find ~/Documents/kanji -name "*.json" | sort -R | tail -n 1)
+kanji_data=$(cat $random_file)
 
 # Use jq (needs to be installed to parse json data)
 character=$(echo $kanji_data | jq -r ".kanji")

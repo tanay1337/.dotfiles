@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
-# Get the Kanji data and store it in a new folder
-#i=1
-#while [ $i -le 100 ]
-#do 
-#  curl -s http://ec2-13-60-36-124.eu-north-1.compute.amazonaws.com/api/v1/kanji/$i > ~/Documents/kanji/$i.json
-#  i=$(($i+1))
-#done
-
+# Get the Kanji data
 random_file=$(find ~/Documents/kanji -name "*.json" | sort -R | tail -n 1)
 kanji_data=$(cat $random_file)
 

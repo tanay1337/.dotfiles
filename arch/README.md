@@ -24,6 +24,8 @@ Some reference YouTube videos:
   - The Tokyo Pink wallpaper needs to be copied to the correct location.
 - Plymouth setup: https://wiki.archlinux.org/title/Plymouth along with the SDDM instructions.
 - Fingerprint setup: https://wiki.archlinux.org/title/Fprint
+- For random kanji: https://github.com/tanay1337/kanji-files-generator
+  - After following the repo instructions, move the generated files to `Documents/kanji`.
 
 ## Enable services
 

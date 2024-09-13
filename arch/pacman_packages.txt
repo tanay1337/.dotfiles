@@ -15,6 +15,7 @@ cliphist
 cryptsetup
 easyeffects
 efibootmgr
+emacs-wayland
 eza
 fastfetch
 ffmpegthumbnailer
@@ -66,7 +67,6 @@ pywal-16-colors
 qt5-wayland
 qt6-5compat
 qt6-svg
-radeontop
 rofi-wayland
 rofimoji
 rose-pine-cursor

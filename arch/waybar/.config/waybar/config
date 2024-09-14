@@ -7,7 +7,7 @@
     // Order of the modules
     "modules-left": ["custom/launcher", "custom/kanji"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["temperature", "memory", "cpu", "battery", "clock"],
+    "modules-right": ["temperature", "battery", "clock"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,

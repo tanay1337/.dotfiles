@@ -9,7 +9,7 @@ if [ -z "$1" ]; then
 elif [ "$1" == "--random" ]; then
     wallpaper=$(find $wallpaper_directory -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" | sort -R | tail -n 1)
 elif [ "$1" == "--default" ]; then
-    wallpaper="$wallpaper_directory/Tokyo_Pink.png"
+    wallpaper="$wallpaper_directory/random-github.jpeg"
 else
     wallpaper="$wallpaper_directory/${1}"
 fi

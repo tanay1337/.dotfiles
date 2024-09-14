@@ -23,6 +23,8 @@ file-roller
 firefox-developer-edition
 fprintd
 fzf
+gdm
+gdm-settings
 git
 gnome-calculator
 go-yq
@@ -61,6 +63,7 @@ pipewire-audio
 pipewire-pulse
 plymouth
 pokemon-colorscripts-git
+polkit-gnome
 power-profiles-daemon
 python-pywalfox
 pywal-16-colors
@@ -71,8 +74,6 @@ rofi-wayland
 rofimoji
 rose-pine-cursor
 rose-pine-hyprcursor
-sddm
-simple-sddm-theme-git
 stow
 swappy
 swww

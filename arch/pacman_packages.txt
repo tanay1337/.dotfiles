@@ -63,6 +63,7 @@ pipewire-audio
 pipewire-pulse
 plymouth
 pokemon-colorscripts-git
+poketex
 polkit-gnome
 power-profiles-daemon
 python-pywalfox

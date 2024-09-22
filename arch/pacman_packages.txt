@@ -58,6 +58,7 @@ otf-ipafont
 pamixer
 papirus-icon-theme
 pavucontrol
+pik
 pipewire-alsa
 pipewire-audio
 pipewire-pulse
@@ -93,6 +94,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 yay
+yay-debug
 zathura
 zathura-cb
 zathura-pdf-mupdf

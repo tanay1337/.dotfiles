@@ -18,6 +18,7 @@ efibootmgr
 emacs-wayland
 eza
 fastfetch
+fd
 ffmpegthumbnailer
 file-roller
 firefox-developer-edition
@@ -72,6 +73,7 @@ pywal-16-colors
 qt5-wayland
 qt6-5compat
 qt6-svg
+ripgrep
 rofi-wayland
 rofimoji
 rose-pine-cursor

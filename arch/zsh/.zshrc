@@ -10,6 +10,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vi="nvim"
 alias vim="nvim"
+alias emacs="emacsclient -c -a 'emacs'"
 alias ls="eza --icons"
 alias top="btop"
 alias pokemon="pokemon-colorscripts -r"
@@ -23,6 +24,7 @@ bindkey -s ^g "lazygit\n"
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

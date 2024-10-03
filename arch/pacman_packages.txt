@@ -81,6 +81,7 @@ rose-pine-hyprcursor
 stow
 swappy
 swww
+systemd-resolvconf
 telegram-desktop
 texinfo
 tmux
@@ -90,6 +91,7 @@ usbutils
 vim
 vulkan-radeon
 waybar
+wireguard-tools
 wl-screenrec
 wlogout
 xdg-desktop-portal-gtk

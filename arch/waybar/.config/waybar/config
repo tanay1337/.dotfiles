@@ -7,7 +7,7 @@
     // Order of the modules
     "modules-left": ["custom/launcher", "custom/kanji"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["temperature", "memory", "cpu", "battery", "clock"],
+    "modules-right": ["group/hardware", "clock"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -36,6 +36,20 @@
         "escape": true,
         "exec": "~/.local/bin/./kanji",
         "interval": 1800
+    },
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "battery",
+            "temperature",
+            "memory",
+            "cpu"
+        ]
     },
     "temperature": {
        "format": "{icon} {temperatureC}°C",
@@ -74,11 +88,9 @@
     },
     "clock": {
         "format": "{:%a %d. %b %I:%M %p}",
-        "tooltip-format": "<span size='18pt'><tt>{calendar}</tt></span>",
+        "tooltip-format": "<span size='16pt' font='SF Mono'>{calendar}</span>",
         "calendar": {
             "mode": "month",
-            "mode-mon-col": 3,
-            "on-scroll": 1,
             "format": {
                 "months": "<span color='#ffffff'>{}</span>",
                 "days": "<span color='#ffead3'>{}</span>",
@@ -86,9 +98,6 @@
                 "today": "<span color='#ff6699'><b>{}</b></span>"
             },
             "actions":  {
-                "on-click-right": "mode",
-                "on-scroll-up": "tz_up",
-                "on-scroll-down": "tz_down",
                 "on-scroll-up": "shift_up",
                 "on-scroll-down": "shift_down"
             }

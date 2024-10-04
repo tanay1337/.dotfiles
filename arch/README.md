@@ -26,6 +26,8 @@ Some reference YouTube videos:
 - Fingerprint setup: https://wiki.archlinux.org/title/Fprint
 - For random kanji: https://github.com/tanay1337/kanji-files-generator
   - After following the repo instructions, move the generated files to `Documents/kanji`.
+- Set [GRUB password](https://wiki.archlinux.org/title/GRUB/Tips_and_tricks#Password_protection_of_GRUB_menu) and add a [pacman hook](https://wiki.archlinux.org/title/Talk:GRUB/Tips_and_tricks#Password_protection_of_non_local_system_boot_options) for unrestricted entry to boot into Arch.
+- Set BIOS password and disable booting from USB devices (if on a new device).
 
 ## Enable services
 

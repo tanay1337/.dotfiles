@@ -43,6 +43,8 @@ libfprint
 libnotify
 linux
 linux-firmware
+linux-hardened
+linux-hardened-headers
 lvm2
 mako
 man-db

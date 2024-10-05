@@ -19,7 +19,7 @@ Some reference YouTube videos:
 - Clone this repo.
 - Stow all the folders in `arch` and also `wallpapers`.
 - Install all the packages.
-- SDDM instructions here: https://github.com/JaKooLit/simple-sddm. 
+- SDDM instructions here: https://github.com/JaKooLit/simple-sddm (if not using GDM) 
   - Edited theme file in `backups`. Needs to be moved to the right location.
   - The Tokyo Pink wallpaper needs to be copied to the correct location.
 - Plymouth setup: https://wiki.archlinux.org/title/Plymouth along with the SDDM instructions.
@@ -28,13 +28,16 @@ Some reference YouTube videos:
   - After following the repo instructions, move the generated files to `Documents/kanji`.
 - Set [GRUB password](https://wiki.archlinux.org/title/GRUB/Tips_and_tricks#Password_protection_of_GRUB_menu) and add a [pacman hook](https://wiki.archlinux.org/title/Talk:GRUB/Tips_and_tricks#Password_protection_of_non_local_system_boot_options) for unrestricted entry to boot into Arch.
 - Set BIOS password and disable booting from USB devices (if on a new device).
+- Generate [device policy](https://wiki.archlinux.org/title/USBGuard) for usbguard.
 
 ## Enable services
 
 This might not be an exhaustive list:
 - NetworkManager
-- SDDM
+- SDDM/GDM
 - `timectl set-ntp true`
 - bluetooth
 - power-profiles-daemon
+- systemd-resolved
+- usbguard-dbus
 

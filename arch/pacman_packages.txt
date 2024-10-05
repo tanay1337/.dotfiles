@@ -89,6 +89,7 @@ texinfo
 tmux
 ttf-hack-nerd
 tumbler
+usbguard
 usbutils
 vim
 vulkan-radeon

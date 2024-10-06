@@ -7,7 +7,7 @@
     // Order of the modules
     "modules-left": ["custom/launcher", "custom/kanji"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["group/hardware", "clock"],
+    "modules-right": ["group/hardware", "pulseaudio", "clock"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -74,10 +74,9 @@
        "max-length": 25
     },
     "pulseaudio": {
-        //"scroll-step": 1,
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": "􀊣",
+        "format-muted": "􀊣 0%",
         "format-icons": {
             "headphones": "",
             "handsfree": "",

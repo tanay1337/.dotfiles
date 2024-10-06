@@ -23,6 +23,7 @@ ffmpegthumbnailer
 file-roller
 firefox-developer-edition
 fprintd
+fwupd
 fzf
 gdm
 gdm-settings
@@ -91,6 +92,7 @@ texinfo
 tmux
 ttf-hack-nerd
 tumbler
+ufw
 usbguard
 usbmuxd
 usbutils

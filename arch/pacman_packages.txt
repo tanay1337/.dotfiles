@@ -5,6 +5,7 @@ arc-gtk-theme
 avizo
 base
 base-devel
+bat
 blueman
 bluez
 bluez-utils
@@ -33,6 +34,7 @@ go-yq
 grim
 grimshot
 grub
+guvcview
 gvfs
 gvfs-afc
 hyprcursor
@@ -90,6 +92,7 @@ systemd-resolvconf
 telegram-desktop
 texinfo
 tmux
+topgrade
 ttf-hack-nerd
 tumbler
 ufw

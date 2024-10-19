@@ -48,7 +48,6 @@ libfprint
 libnotify
 linux
 linux-firmware
-linux-hardened
 linux-hardened-headers
 lvm2
 mako
@@ -75,7 +74,6 @@ pokemon-colorscripts-git
 poketex
 polkit-gnome
 power-profiles-daemon
-python-pywalfox
 pywal-16-colors
 qt5-wayland
 qt6-5compat

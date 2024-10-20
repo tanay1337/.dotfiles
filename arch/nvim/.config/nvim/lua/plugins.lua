@@ -14,8 +14,6 @@ require("packer").startup(function(use)
 	use("sbdchd/neoformat")
 	use("nvim-treesitter/playground")
 
-	use("vimwiki/vimwiki")
-
 	use({
 		"kosayoda/nvim-lightbulb",
 		requires = "antoinemadec/FixCursorHold.nvim",
@@ -50,20 +48,6 @@ require("packer").startup(function(use)
 		requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 		config = function()
 			require("cosmic-ui").setup()
-		end,
-	})
-
-	-- for some practice
-	use("ThePrimeagen/vim-be-good")
-
-	use({
-		"alexghergh/nvim-tmux-navigation",
-		config = function()
-			local nvim_tmux_nav = require("nvim-tmux-navigation")
-
-			nvim_tmux_nav.setup({
-				disable_when_zoomed = true, -- defaults to false
-			})
 		end,
 	})
 

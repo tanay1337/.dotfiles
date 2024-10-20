@@ -34,18 +34,6 @@ vim.keymap.set("n", "<leader>fd", function()
 	vim.lsp.buf.format({ async = true })
 end, { desc = "Format document" })
 
--- Tmux Navigation
--- vim.keymap.set("n", "<C-h>", vim.cmd.NvimTmuxNavigateLeft)
--- vim.keymap.set("n", "<C-j>", vim.cmd.NvimTmuxNavigateDown)
--- vim.keymap.set("n", "<C-k>", vim.cmd.NvimTmuxNavigateUp)
--- vim.keymap.set("n", "<C-l>", vim.cmd.NvimTmuxNavigateRight)
-
--- Tmux-sessionizer
-vim.keymap.set("n", "<C-f>", "<cmd>:silent !tmux display-popup -E 'tmux-sessionizer'<cr>")
-
--- Language/command query
-vim.keymap.set("n", "<C-q>", "<cmd>:silent !tmux display-popup -E 'tmux-cht.sh'<cr>")
-
 -- chmod a current executable file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 

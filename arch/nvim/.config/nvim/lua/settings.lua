@@ -22,11 +22,5 @@ vim.opt.termguicolors = true
 
 vim.opt.mouse = "a"
 
--- Disable Copilot by default
-vim.g.copilot_enabled = false
-
--- Vimwiki settings
-vim.g.vimwiki_list = { { path = "~/vimwiki", syntax = "markdown", ext = ".md" } }
-
 -- Format on save
 vim.cmd([[autocmd BufWritePre * undojoin | Neoformat ]])

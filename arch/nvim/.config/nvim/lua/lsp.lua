@@ -8,7 +8,6 @@ mason.setup({
 	ensure_installed = {
 		"lua_ls",
 		"eslint",
-		"tsserver",
 		"rust_analyzer",
 	},
 	automatic_installation = true,
@@ -73,17 +72,6 @@ lsp.on_attach(function(client, bufnr)
 		vim.lsp.buf.signature_help()
 	end, { buffer = bufnr, remap = false, desc = "Signature help" })
 end)
-
-lspconfig["tsserver"].setup({
-	filetypes = {
-		"javascript",
-		"javascriptreact",
-		"javascript.jsx",
-		"typescript",
-		"typescriptreact",
-		"typescript.tsx",
-	},
-})
 
 lspconfig["lua_ls"].setup({
 	settings = {

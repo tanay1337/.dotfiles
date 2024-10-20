@@ -16,7 +16,6 @@ cliphist
 cryptsetup
 easyeffects
 efibootmgr
-emacs-wayland
 eza
 fastfetch
 fd

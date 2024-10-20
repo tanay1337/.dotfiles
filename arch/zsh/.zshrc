@@ -10,7 +10,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias vi="nvim"
 alias vim="nvim"
-alias emacs="emacsclient -c -a 'emacs'"
 alias ls="eza --icons"
 alias ps="pik"
 alias top="btop"

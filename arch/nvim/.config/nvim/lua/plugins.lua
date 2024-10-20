@@ -1,95 +1,103 @@
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
+
 -- Plugins
-
-require("packer").startup(function(use)
-	use("wbthomason/packer.nvim")
-	use("nvim-treesitter/nvim-treesitter")
-	use("windwp/nvim-autopairs")
-	use("numToStr/Comment.nvim")
-	use("nmac427/guess-indent.nvim")
-	use("lewis6991/gitsigns.nvim")
-	use("navarasu/onedark.nvim")
-	use("mbbill/undotree")
-	use("laytan/cloak.nvim")
-	use("mfussenegger/nvim-dap")
-	use("sbdchd/neoformat")
-	use("nvim-treesitter/playground")
-
-	use({
+local plugins = {
+	"wbthomason/packer.nvim",
+	"nvim-treesitter/nvim-treesitter",
+	"windwp/nvim-autopairs",
+	"numToStr/Comment.nvim",
+	"nmac427/guess-indent.nvim",
+	"lewis6991/gitsigns.nvim",
+	"navarasu/onedark.nvim",
+	"mbbill/undotree",
+	"laytan/cloak.nvim",
+	"mfussenegger/nvim-dap",
+	"sbdchd/neoformat",
+	"nvim-treesitter/playground",
+	{
 		"kosayoda/nvim-lightbulb",
-		requires = "antoinemadec/FixCursorHold.nvim",
-	})
-
-	use({
+		dependencies = "antoinemadec/FixCursorHold.nvim"
+	},
+	{
 		"kdheepak/lazygit.nvim",
 		-- optional for floating window border decoration
-		requires = {
+		dependencies = {
 			"nvim-lua/plenary.nvim",
-		},
-	})
-
-	use({
+		}
+	},
+	{
 		"nvim-tree/nvim-tree.lua",
-		requires = {
+		dependencies = {
 			"nvim-tree/nvim-web-devicons", -- optional
 		},
-	})
-
-	use({
+	},
+	{
 		"roobert/tailwindcss-colorizer-cmp.nvim",
 		config = function()
 			require("tailwindcss-colorizer-cmp").setup({
 				color_square_width = 4,
 			})
 		end,
-	})
-
-	use({
+	},
+	{
 		"CosmicNvim/cosmic-ui",
-		requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 		config = function()
 			require("cosmic-ui").setup()
 		end,
-	})
-
-	use({
+	},
+	{
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-
-	use({
+		dependencies = { { "nvim-lua/plenary.nvim" } },
+	},
+	{
 		"nvim-lualine/lualine.nvim",
-		requires = {
+		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-	})
-
-	use({
+	},
+	{
 		"goolord/alpha-nvim",
-		requires = { "nvim-tree/nvim-web-devicons" },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("alpha").setup(require("alpha.themes.startify").config)
 		end,
-	})
-
-	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
-
-	use({
+	},
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons"
+	},
+	{
 		"utilyre/barbecue.nvim",
-		tag = "*",
-		requires = {
+		version = "*",
+		dependencies = {
 			"SmiteshP/nvim-navic",
 			"nvim-tree/nvim-web-devicons", -- optional dependency
 		},
-		after = "nvim-web-devicons", -- keep this if you're using NvChad
 		config = function()
 			require("barbecue").setup()
 		end,
-	})
-
-	use({
+	},
+	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v2.x",
-		requires = {
+		dependencies = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" }, -- Required
 			{
@@ -111,10 +119,23 @@ require("packer").startup(function(use)
 			{ "saadparwaiz1/cmp_luasnip" }, -- Required
 			{ "rafamadriz/friendly-snippets" }, -- Required
 			{ "onsails/lspkind-nvim" }, -- Required
-		},
-	})
-end)
+		}
+	}
+}
 
+-- Setup lazy.nvim
+require("lazy").setup({
+  spec = {
+    plugins
+  },
+  -- Configure any other settings here. See the documentation for more details.
+  -- colorscheme that will be used when installing plugins.
+  install = { colorscheme = { "habamax" } },
+  -- automatically check for plugin updates
+  checker = { enabled = true },
+})
+
+-- Plugins config
 require("bufferline").setup({
 	options = {
 		mode = "tabs",
@@ -151,7 +172,6 @@ require("nvim-treesitter.configs").setup({
 		"javascript",
 		"typescript",
 		"python",
-		"prisma",
 		"tsx",
 		"css",
 		"json",

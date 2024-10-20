@@ -1,22 +1,25 @@
 -- Show numbers and relative numbers on the left
 vim.opt.number = true
-vim.wo.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Start moving the screen when the cursor is 8 lines away
 vim.opt.scrolloff = 8
 
--- How tabs behave
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+-- Tree style view for netrw
+vim.cmd("let g:netrw_liststyle = 3")
 
+-- How tabs behave
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+-- Search settings
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 

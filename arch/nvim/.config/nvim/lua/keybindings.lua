@@ -11,6 +11,10 @@ keymap.set("n", "<leader>ct", ":CloakToggle<cr>", { desc = "Toggle secrets cloak
 keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
 keymap.set("n", "<leader>nh", ":nohl<cr>", { desc = "Clear search highlights" })
 
+-- Markdown preview
+keymap.set("n", "<leader>mds", ":MarkdownPreview<cr>", { desc = "Start markdown preview" })
+keymap.set("n", "<leader>mdc", ":MarkdownPreviewStop<cr>", { desc = "Close markdown preview" })
+
 -- Increment and decrement numbers
 keymap.set("n", "<leader>+" ,"<C-a>", { desc = "Increment number" })
 keymap.set("n", "<leader>-" ,"<C-x>", { desc = "Decrement number" })

@@ -1,17 +1,17 @@
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+	if vim.v.shell_error ~= 0 then
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out,                            "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
+	end
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -29,6 +29,15 @@ local plugins = {
 	"sbdchd/neoformat",
 	"nvim-treesitter/playground",
 	"folke/which-key.nvim",
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && npm install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
 	{
 		"kosayoda/nvim-lightbulb",
 		dependencies = "antoinemadec/FixCursorHold.nvim"
@@ -110,29 +119,29 @@ local plugins = {
 			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
 			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" }, -- Required
-			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
-			{ "hrsh7th/cmp-buffer" }, -- Required
-			{ "hrsh7th/cmp-path" }, -- Required
-			{ "hrsh7th/cmp-cmdline" }, -- Required
-			{ "L3MON4D3/LuaSnip" }, -- Required
-			{ "saadparwaiz1/cmp_luasnip" }, -- Required
+			{ "hrsh7th/nvim-cmp" },          -- Required
+			{ "hrsh7th/cmp-nvim-lsp" },      -- Required
+			{ "hrsh7th/cmp-buffer" },        -- Required
+			{ "hrsh7th/cmp-path" },          -- Required
+			{ "hrsh7th/cmp-cmdline" },       -- Required
+			{ "L3MON4D3/LuaSnip" },          -- Required
+			{ "saadparwaiz1/cmp_luasnip" },  -- Required
 			{ "rafamadriz/friendly-snippets" }, -- Required
-			{ "onsails/lspkind-nvim" }, -- Required
+			{ "onsails/lspkind-nvim" },      -- Required
 		}
 	}
 }
 
 -- Setup lazy.nvim
 require("lazy").setup({
-  spec = {
-    plugins
-  },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
+	spec = {
+		plugins
+	},
+	-- Configure any other settings here. See the documentation for more details.
+	-- colorscheme that will be used when installing plugins.
+	install = { colorscheme = { "habamax" } },
+	-- automatically check for plugin updates
+	checker = { enabled = true },
 })
 
 -- Plugins config

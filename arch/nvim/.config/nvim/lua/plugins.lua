@@ -17,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 local plugins = {
-	"wbthomason/packer.nvim",
 	"nvim-treesitter/nvim-treesitter",
 	"windwp/nvim-autopairs",
 	"numToStr/Comment.nvim",
@@ -29,6 +28,7 @@ local plugins = {
 	"mfussenegger/nvim-dap",
 	"sbdchd/neoformat",
 	"nvim-treesitter/playground",
+	"folke/which-key.nvim",
 	{
 		"kosayoda/nvim-lightbulb",
 		dependencies = "antoinemadec/FixCursorHold.nvim"

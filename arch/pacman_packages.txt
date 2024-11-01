@@ -41,6 +41,7 @@ hypridle
 hyprland
 hyprlock
 ifuse
+iwd
 jq
 lazygit
 libfprint

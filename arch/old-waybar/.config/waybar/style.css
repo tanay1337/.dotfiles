@@ -1,0 +1,67 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: SF Pro;
+    font-size: 21px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(43, 48, 59, 0.5);
+    color: white;
+}
+
+.modules-left {
+    padding-left: 25px;
+}
+
+.modules-right {
+    padding-right: 25px;
+}
+
+#workspaces {
+    font-size: 23px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#custom-launcher {
+    font-size: 30px;
+    padding-right: 12px;
+}
+
+#custom-kanji {
+    font-size: 23px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #ffffff;
+}
+
+#workspaces button.active {
+    border-bottom: 1px solid #ffffff;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#temperature, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+#clock {
+    margin: 0 7px;
+}
+

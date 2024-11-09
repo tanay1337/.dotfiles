@@ -2,13 +2,17 @@
     border: none;
     border-radius: 0;
     font-family: SF Pro;
-    font-size: 22px;
+    font-size: 21px;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
+    background: rgba(17, 17, 27, 0.8);
     color: white;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
 }
 
 .modules-left {
@@ -19,49 +23,85 @@ window#waybar {
     padding-right: 25px;
 }
 
-#workspaces {
-    font-size: 23px;
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
 #custom-launcher {
-    font-size: 30px;
-    padding-right: 12px;
+    padding: 0rem 0.6rem;
+    border-radius: 5px;
+    margin: 0rem 0.25rem;
+    color: #f38ba8;
 }
 
 #custom-kanji {
-    font-size: 23px;
+    font-size: 21px;
     padding-left: 7px;
     padding-right: 7px;
 }
 
-#workspaces button {
-    padding: 0 10px;
-    color: white;
-    font-weight: bold;
+#workspaces {
+    border-radius: 5px;
+    margin: 0rem 0.25rem;
+    color: #f38ba8;
 }
 
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    border-bottom: 2px solid #ffffff;
+#workspaces button {
+    color: #cdd6f4;
+    border-radius: 1rem;
+    padding: 0.4rem;
 }
 
 #workspaces button.active {
-    border-bottom: 1px solid #ffffff;
+    color: #89b4fa;
+    border-radius: 1rem;
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+#workspaces button:hover {
+    color: #1e1e2e;
+    background-color: #cdd6f4;
+    border-radius: 1rem;
 }
 
-#temperature, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
-    padding: 0 5px;
-    margin: 0 5px;
+#clock,
+#battery,
+#temperature,
+#pulseaudio,
+#custom-logo,
+#cpu,
+#tray,
+#memory,
+#window {
+  padding: 0rem 0.6rem;
+  border-radius: 6px;
+  margin: 0rem 0.25rem;
+}
+
+#cpu {
+  color: #d793a0;
+}
+
+#memory {
+  color: #cba6f7;
 }
 
 #clock {
-    margin: 0 7px;
+  color: #f5c2e7;
 }
 
+#window {
+  color: #f0bfe3;
+}
+
+#pulseaudio {
+  color: #92dfd2;
+}
+
+#battery {
+  color: #c5a1f0;
+}
+
+#temperature {
+    color: #89b4fa;
+}
+
+tooltip {
+  background-color: #181825;
+  border-radius: 5px;
+}

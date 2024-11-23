@@ -49,6 +49,7 @@ libnotify
 linux
 linux-firmware
 linux-hardened-headers
+loupe
 lvm2
 mako
 man-db

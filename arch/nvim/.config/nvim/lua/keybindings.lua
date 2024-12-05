@@ -64,3 +64,7 @@ keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { desc = "Chmod the current
 
 -- Copy to system clipboard
 keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy selected text to system clipboard" })
+
+-- Restore session
+keymap.set("n", "<leader>rl", function() require("persistence").load({ last = true }) end, { desc = "Restore the last session" })
+keymap.set("n", "<leader>rc", function() require("persistence").load() end, { desc = "Restore the last session for the current directory" })

@@ -67,6 +67,7 @@ pamixer
 papirus-icon-theme
 pavucontrol
 pik
+pika-backup
 pipewire-alsa
 pipewire-audio
 pipewire-pulse

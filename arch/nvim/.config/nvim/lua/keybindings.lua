@@ -43,9 +43,10 @@ keymap.set("n", "<leader>nc", ":NvimTreeCollapse<cr>", { desc = "Collapse items 
 keymap.set("n", "<leader>nr", ":NvimTreeRefresh<cr>", { desc = "Refresh nvim tree" })
 
 -- Telescope search
-keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", { desc = "Search files" })
-keymap.set("n", "<leader>gf", ":Telescope git_files<cr>", { desc = "Search files tracked by git" })
-keymap.set("n", "<C-p>", ":Telescope git_files<cr>", { desc = "Search files tracked by git" })
+keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", { desc = "Find files" })
+keymap.set("n", "<leader>fw", ":Telescope live_grep<cr>", { desc = "Find word" })
+keymap.set("n", "<leader>fr", ":Telescope oldfiles<cr>", { desc = "Find recent files" })
+keymap.set("n", "<leader>fg", ":Telescope git_files<cr>", { desc = "Find files tracked by git" })
 
 -- Treesitter playground toggle
 keymap.set("n", "<leader>pt", ":TSPlaygroundToggle<cr>", { desc = "Toggle Treesitter playground" })
@@ -68,3 +69,4 @@ keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy selected text to s
 -- Restore session
 keymap.set("n", "<leader>rl", function() require("persistence").load({ last = true }) end, { desc = "Restore the last session" })
 keymap.set("n", "<leader>rc", function() require("persistence").load() end, { desc = "Restore the last session for the current directory" })
+keymap.set("n", "<leader>rs", function() require("persistence").select() end, { desc = "Select a session to restore" })

@@ -22,6 +22,9 @@ keymap.set("n", "<leader>-" ,"<C-x>", { desc = "Decrement number" })
 -- LazyGit
 keymap.set("n", "<leader>gg", ":LazyGit<cr>", { desc = "Open LazyGit" })
 
+-- Todo list
+keymap.set("n", "<leader>tl", ":TodoTelescope<cr>", { desc = "Open ToDo List" })
+
 -- Windows
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split windows vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split windows horizontally" })

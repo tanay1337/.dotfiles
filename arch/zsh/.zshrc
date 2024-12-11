@@ -17,6 +17,7 @@ alias cat="bat"
 alias pokemon="pokemon-colorscripts -r"
 alias record="wl-screenrec"
 alias ff="fastfetch"
+alias whatsapp="firefox-developer-edition --new-window 'web.whatsapp.com'"
 
 bindkey -s ^g "lazygit\n"
 

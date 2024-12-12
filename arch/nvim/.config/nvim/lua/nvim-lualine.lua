@@ -38,7 +38,7 @@ local config = {
 		-- Disable sections and component separators
 		component_separators = "",
 		section_separators = "",
-		theme = "onedark",
+		theme = "auto",
 	},
 	sections = {
 		-- these are to remove the defaults
@@ -121,7 +121,7 @@ ins_left({
 ins_right({
 	-- Lsp server name .
 	function()
-		local msg = "No Active Lsp"
+		local msg = "No Active LSP"
 		local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
 		local clients = vim.lsp.get_active_clients()
 		if next(clients) == nil then

@@ -20,7 +20,10 @@ keymap.set("n", "<leader>+" ,"<C-a>", { desc = "Increment number" })
 keymap.set("n", "<leader>-" ,"<C-x>", { desc = "Decrement number" })
 
 -- LazyGit
-keymap.set("n", "<leader>gg", ":LazyGit<cr>", { desc = "Open LazyGit" })
+keymap.set("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Open LazyGit" })
+
+-- Terminal
+keymap.set("n", "<leader>tt", function() Snacks.terminal() end, { desc = "Toggle terminal" })
 
 -- Todo list
 keymap.set("n", "<leader>tl", ":TodoTelescope<cr>", { desc = "Open ToDo List" })

@@ -29,3 +29,6 @@ opt.mouse = "a"
 
 -- Format on save
 vim.cmd([[autocmd BufWritePre * undojoin | Neoformat ]])
+
+-- Theme
+vim.cmd[[colorscheme tokyonight-night]]

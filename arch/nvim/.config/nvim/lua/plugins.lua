@@ -22,12 +22,10 @@ local plugins = {
 	"numToStr/Comment.nvim",
 	"nmac427/guess-indent.nvim",
 	"lewis6991/gitsigns.nvim",
-	"navarasu/onedark.nvim",
 	"mbbill/undotree",
 	"laytan/cloak.nvim",
 	"mfussenegger/nvim-dap",
 	"sbdchd/neoformat",
-	"nvim-treesitter/playground",
 	"folke/which-key.nvim",
 	{
 		'MeanderingProgrammer/render-markdown.nvim',
@@ -58,13 +56,6 @@ local plugins = {
 	{
 		"kosayoda/nvim-lightbulb",
 		dependencies = "antoinemadec/FixCursorHold.nvim"
-	},
-	{
-		"kdheepak/lazygit.nvim",
-		-- optional for floating window border decoration
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		}
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -98,11 +89,18 @@ local plugins = {
 		},
 	},
 	{
-		"goolord/alpha-nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("alpha").setup(require("alpha.themes.startify").config)
-		end,
+		"folke/snacks.nvim",
+		opts = {
+			dashboard = {},
+			lazygit = {},
+			terminal = {}
+		}
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 	},
 	{
 		"akinsho/bufferline.nvim",
@@ -231,14 +229,6 @@ require("nvim-tree").setup({
 	},
 })
 
-require("onedark").setup({
-	style = "darker",
-	transparent = "true",
-	lualine = {
-		transparent = true, -- lualine center bar transparency
-	},
-})
-
 require("cloak").setup({
 	enabled = true,
 	cloak_character = "*",
@@ -259,5 +249,3 @@ require("cloak").setup({
 		},
 	},
 })
-
-require("onedark").load()

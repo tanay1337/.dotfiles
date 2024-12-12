@@ -27,6 +27,7 @@ local plugins = {
 	"mfussenegger/nvim-dap",
 	"sbdchd/neoformat",
 	"folke/which-key.nvim",
+	{ 'echasnovski/mini.indentscope', version = '*' },
 	{
 		'MeanderingProgrammer/render-markdown.nvim',
 		dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' },
@@ -182,13 +183,14 @@ require("bufferline").setup({
 
 require("telescope").setup()
 require("nvim-autopairs").setup()
-require("guess-indent").setup()
+require("guess-indent").setup {}
 require("Comment").setup()
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("nvim-lightbulb").setup({ autocmd = { enabled = true } })
+require('mini.indentscope').setup()
 
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter.configs").setup {
 	highlight = {
 		enable = true,
 	},
@@ -204,7 +206,10 @@ require("nvim-treesitter.configs").setup({
 		"go",
 		"vim",
 	},
-})
+	sync_install = false,
+	auto_install = true,
+	ignore_install = {},
+}
 
 require("gitsigns").setup({
 	signs = {

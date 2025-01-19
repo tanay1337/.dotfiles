@@ -1,5 +1,5 @@
 [general]
-import = ["/home/tanay/.cache/wal/colors-alacritty.toml"]
+import = ["tokyo-night.toml"]
 
 [font]
 size = 18.0
@@ -28,4 +28,4 @@ key = "F11"
 history = 50000
 
 [window]
-opacity = 0.85
+opacity = 0.90

@@ -14,6 +14,7 @@ btop
 cava
 cliphist
 cryptsetup
+cups
 easyeffects
 efibootmgr
 eza
@@ -46,6 +47,7 @@ jq
 lazygit
 libfprint
 libnotify
+libreoffice-fresh
 linux
 linux-firmware
 linux-hardened-headers
@@ -76,7 +78,6 @@ pokemon-colorscripts-git
 poketex
 polkit-gnome
 power-profiles-daemon
-pywal-16-colors
 qt5-wayland
 qt6-5compat
 qt6-svg
@@ -88,6 +89,7 @@ rose-pine-hyprcursor
 stow
 swappy
 swww
+system-config-printer
 systemd-resolvconf
 telegram-desktop
 texinfo

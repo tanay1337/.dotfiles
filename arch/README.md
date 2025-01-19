@@ -31,6 +31,7 @@ Some reference YouTube videos:
 - Generate [device policy](https://wiki.archlinux.org/title/USBGuard) for usbguard.
 - Set up [ProtonVPN](https://wiki.archlinux.org/title/ProtonVPN) with WireGuard.
 - Set up [ufw](https://wiki.archlinux.org/title/Uncomplicated_Firewall). Apply [Forward Policy](https://wiki.archlinux.org/title/Uncomplicated_Firewall#Forward_policy) for using Wireguard.
+- For printing, add the user to the `lp` group using the following command: `sudo usermod -aG lp tanay` and reboot.
 
 ## Enable services
 
@@ -43,4 +44,6 @@ This might not be an exhaustive list:
 - systemd-resolved
 - usbguard-dbus
 - ufw
+- cups.service
+- avahi-daemon.service
 

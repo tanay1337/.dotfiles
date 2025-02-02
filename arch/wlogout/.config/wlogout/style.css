@@ -9,10 +9,9 @@ window {
 
 button {
 	font-family: 'SF Pro';
-	font-size: 3rem;
+	font-size: 2.5rem;
 	background-color: rgba(11, 11, 11, 0.4);
 	color: #FFFFFF;
-	margin: 2rem;
 	border-radius: 4rem;
 	background-repeat: no-repeat;
 	background-position: center;

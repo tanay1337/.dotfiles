@@ -43,7 +43,7 @@ window {
     cursor:                     "default";
     spacing:                    0px;
     border:                     2px;
-    border-radius:              30px;
+    border-radius:              10px;
     location:                   center;
     anchor:                     center;
 
@@ -54,7 +54,7 @@ window {
 
 /* ----- Main Box ----- */
 mainbox {
-	padding:					 15px;
+	padding:					 9px;
     enabled:                     true;
     orientation:                 vertical;
     children:                    [ "inputbar", "listbox" ];
@@ -65,8 +65,8 @@ mainbox {
 /* ---- Inputbar ---- */
 inputbar {
     enabled:                     true;
-    padding:                     10px 10px 100px 10px;
-    margin:                      10px;
+    padding:                     5px 5px 50px 5px;
+    margin:                      5px;
     background-color:            transparent;
     border-radius:               25px;
     orientation:                 horizontal;
@@ -79,7 +79,7 @@ entry {
     expand:                      false;
     width:                       20%;
     padding:                     10px;
-    border-radius:               12px;
+    border-radius:               8px;
     background-color:            @selected;
     text-color:                  @text-selected;
     cursor:                      text;
@@ -124,13 +124,13 @@ dummy {
 /* ---- Mode Switcher ---- */
 mode-switcher{
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     5px;
     background-color:            transparent;
 }
 button {
     width:                       5%;
     padding:                     12px;
-    border-radius:               12px;
+    border-radius:               10px;
     background-color:            @text-selected;
     text-color:                  @text-color;
     cursor:                      pointer;
@@ -142,10 +142,10 @@ button selected {
 
 /* ---- Scrollbar ---- */
 scrollbar {
-    width:        4px ;
+    width:        2px ;
     border:       0;
     handle-color: @border-color;
-    handle-width: 8px ;
+    handle-width: 4px ;
     padding:      0;
 }
 
@@ -200,7 +200,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        36px;
+    size:                        26px;
     cursor:                      inherit;
 }
 element-text {
@@ -218,7 +218,7 @@ message {
 }
 textbox {
     padding:                     12px;
-    border-radius:               10px;
+    border-radius:               5px;
     background-color:            @background-alt;
     text-color:                  @background;
     vertical-align:              0.5;

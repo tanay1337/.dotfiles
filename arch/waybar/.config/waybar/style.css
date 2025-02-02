@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: SF Pro;
-    font-size: 21px;
+    font-size: 13.4px;
     min-height: 0;
 }
 
@@ -16,36 +16,23 @@ window#waybar.empty #window {
 }
 
 .modules-left {
-    padding-left: 25px;
+    padding-left: 7px;
 }
 
 .modules-right {
-    padding-right: 25px;
-}
-
-#custom-launcher {
-    padding: 0rem 0.6rem;
-    border-radius: 5px;
-    margin: 0rem 0.25rem;
-    color: #f38ba8;
-}
-
-#custom-kanji {
-    font-size: 21px;
-    padding-left: 7px;
     padding-right: 7px;
 }
 
 #workspaces {
-    border-radius: 5px;
-    margin: 0rem 0.25rem;
+    border-radius: 3px;
+    margin: 0rem 0.15rem;
     color: #f38ba8;
 }
 
 #workspaces button {
     color: #cdd6f4;
     border-radius: 1rem;
-    padding: 0.4rem;
+    padding: 0.2rem;
 }
 
 #workspaces button.active {
@@ -68,9 +55,9 @@ window#waybar.empty #window {
 #tray,
 #memory,
 #window {
-  padding: 0rem 0.6rem;
+  padding: 0rem 0.5rem;
   border-radius: 6px;
-  margin: 0rem 0.25rem;
+  margin: 0rem 0.15rem;
 }
 
 #cpu {
@@ -99,6 +86,13 @@ window#waybar.empty #window {
 
 #temperature {
     color: #89b4fa;
+}
+
+#custom-launcher {
+    padding: 0rem 0.5rem;
+    border-radius: 5px;
+    margin: 0rem 0.15rem;
+    color: #f38ba8;
 }
 
 tooltip {

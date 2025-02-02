@@ -2,7 +2,7 @@
 import = ["tokyo-night.toml"]
 
 [font]
-size = 18.0
+size = 12.0
 
 [font.bold]
 family = "Hack Nerd Font"

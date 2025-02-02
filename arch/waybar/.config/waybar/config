@@ -1,7 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar at the bottom of your screen
-    "height": 42, // Waybar height
+    "height": 28, // Waybar height
     "reload_style_on_change": true,
 
     // Order of the modules
@@ -94,7 +94,7 @@
     },
     "clock": {
         "format": "{:%a %d. %b %I:%M %p}",
-        "tooltip-format": "<span size='17pt' font='SF Mono'>{calendar}</span>",
+        "tooltip-format": "<span size='12pt' font='SF Mono'>{calendar}</span>",
         "calendar": {
             "mode": "month",
             "format": {

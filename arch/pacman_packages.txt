@@ -28,7 +28,6 @@ fzf
 gdm
 gdm-settings
 git
-gnome-calculator
 go-yq
 grim
 grimshot
@@ -40,6 +39,7 @@ hyprcursor
 hypridle
 hyprland
 hyprlock
+hyprpicker
 ifuse
 iwd
 jq
@@ -78,6 +78,7 @@ pokemon-colorscripts-git
 poketex
 polkit-gnome
 power-profiles-daemon
+python-pywal16
 qt5-wayland
 qt6-5compat
 qt6-svg
@@ -88,6 +89,7 @@ rose-pine-cursor
 rose-pine-hyprcursor
 stow
 swappy
+swaync
 swww
 system-config-printer
 systemd-resolvconf

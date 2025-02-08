@@ -44,8 +44,6 @@ element-icon {
 }
 
 element-text {
-  font: "SF Pro 9";
-  vertical-align: 0.5;
-  horizontal-align: 0.5;
+  font: "SF Pro 0.1";
 }
 

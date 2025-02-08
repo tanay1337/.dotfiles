@@ -15,5 +15,6 @@ else
 fi
 
 swww img -o $focused_monitor ${wallpaper}
+wal -i ${wallpaper}
 sleep 1
 ~/.local/bin/./wallpaper_hyprlock 

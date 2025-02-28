@@ -10,8 +10,8 @@ entry {
 }
 
 listview {
-  columns:       9;
-  lines:         7;
+  columns:       7;
+  lines:         5;
   cycle:         true;
   dynamic:       true;
   layout:        vertical;
@@ -28,6 +28,6 @@ element {
 element-text {
   vertical-align:   0.5;
   horizontal-align: 0.5;
-  font:            "SF Pro 12";
+  font:            "SF Pro 14";
 }
 

@@ -16,8 +16,8 @@ alias top="btop"
 alias cat="bat"
 alias pokemon="pokemon-colorscripts -r"
 alias ff="fastfetch"
-alias whatsapp="zen-browser --new-window 'web.whatsapp.com'"
-alias wa="zen-browser -new-window 'web.whatsapp.com'"
+alias whatsapp="firefox-developer-edition --new-window 'web.whatsapp.com'"
+alias wa="firefox-developer-edition -new-window 'web.whatsapp.com'"
 
 bindkey -s ^g "lazygit\n"
 

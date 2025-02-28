@@ -22,6 +22,7 @@ fastfetch
 fd
 ffmpegthumbnailer
 file-roller
+firefox-developer-edition
 fprintd
 fwupd
 fzf
@@ -63,6 +64,7 @@ nodejs
 notejot
 npm
 obs-studio
+ollama
 otf-font-awesome
 otf-ipafont
 pamixer
@@ -116,6 +118,5 @@ yay-debug
 zathura
 zathura-cb
 zathura-pdf-mupdf
-zen-browser-bin
 zoxide
 zsh-theme-powerlevel10k-git

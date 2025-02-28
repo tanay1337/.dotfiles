@@ -111,6 +111,7 @@ vulkan-radeon
 waybar
 wireguard-tools
 wlogout
+wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs

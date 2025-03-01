@@ -22,7 +22,6 @@ fastfetch
 fd
 ffmpegthumbnailer
 file-roller
-firefox-developer-edition
 fprintd
 fwupd
 fzf
@@ -48,6 +47,7 @@ lazygit
 libfprint
 libnotify
 libreoffice-fresh
+librewolf-bin
 linux
 linux-firmware
 linux-hardened-headers
@@ -99,6 +99,7 @@ systemd-resolvconf
 telegram-desktop
 texinfo
 tmux
+tokei
 topgrade
 ttf-hack-nerd
 tumbler

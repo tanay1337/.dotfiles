@@ -92,7 +92,6 @@ rose-pine-cursor
 rose-pine-hyprcursor
 stow
 swappy
-swaync
 swww
 system-config-printer
 systemd-resolvconf

@@ -2,6 +2,7 @@ alacritty
 amd-ucode
 apple-fonts
 arc-gtk-theme
+arduino-ide
 avizo
 base
 base-devel
@@ -17,6 +18,7 @@ cryptsetup
 cups
 easyeffects
 efibootmgr
+espeak
 eza
 fastfetch
 fd
@@ -28,10 +30,12 @@ fzf
 gdm
 gdm-settings
 git
+gnome-calculator
 go-yq
 grim
 grimshot
 grub
+gtypist
 guvcview
 gvfs
 gvfs-afc
@@ -81,6 +85,7 @@ pokemon-colorscripts-git
 poketex
 polkit-gnome
 power-profiles-daemon
+python-pyaudio
 python-pywal16
 qt5-wayland
 qt6-5compat

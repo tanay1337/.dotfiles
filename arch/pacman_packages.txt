@@ -2,7 +2,7 @@ alacritty
 amd-ucode
 apple-fonts
 arc-gtk-theme
-arduino-ide
+arduino-cli
 avizo
 base
 base-devel
@@ -13,6 +13,7 @@ bluez-utils
 brightnessctl
 btop
 cava
+clang
 cliphist
 cryptsetup
 cups
@@ -31,6 +32,7 @@ gdm
 gdm-settings
 git
 gnome-calculator
+go
 go-yq
 grim
 grimshot

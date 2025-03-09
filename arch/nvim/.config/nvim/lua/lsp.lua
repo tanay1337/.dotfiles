@@ -10,7 +10,7 @@ mason.setup({
 		"eslint",
 		"rust_analyzer",
 	},
-	automatic_installation = true,
+	automatic_installation = false,
 })
 
 lsp.nvim_workspace()
@@ -104,6 +104,20 @@ lspconfig["rust_analyzer"].setup({
 			},
 		},
 	},
+})
+
+lspconfig["arduino_language_server"].setup({
+	capabilities = {
+		textDocument = {
+			semanticTokens = vim.NIL
+		},
+		workspace = {
+			semanticTokens = vim.NIL
+		}
+	},
+	cmd = {
+		"arduino-language-server"
+	}
 })
 
 lsp.setup()

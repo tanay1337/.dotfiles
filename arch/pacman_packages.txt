@@ -32,7 +32,9 @@ fzf
 gdm
 gdm-settings
 git
+gnome-boxes
 gnome-calculator
+gnome-calendar
 go
 go-yq
 grim
@@ -54,7 +56,6 @@ lazygit
 lib32-libpulse
 libfprint
 libnotify
-libreoffice-fresh
 librewolf-bin
 linux
 linux-firmware

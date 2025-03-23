@@ -90,7 +90,7 @@
             "headset": "",
             "default": ["􀊥", "􀊧", "􀊩"]
         },
-        "on-click": "pavucontrol"
+        "on-click": "control"
     },
     "clock": {
         "format": "{:%a %d. %b %I:%M %p}",

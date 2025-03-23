@@ -8,7 +8,7 @@ avizo
 base
 base-devel
 bat
-blueman
+better-control-git
 bluez
 bluez-utils
 brightnessctl
@@ -80,7 +80,6 @@ otf-font-awesome
 otf-ipafont
 pamixer
 papirus-icon-theme
-pavucontrol
 pik
 pika-backup
 pipewire-alsa

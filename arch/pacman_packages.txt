@@ -9,6 +9,7 @@ base
 base-devel
 bat
 better-control-git
+blueman
 bluez
 bluez-utils
 brightnessctl
@@ -16,6 +17,7 @@ btop
 cava
 clang
 cliphist
+cronie
 cryptsetup
 cups
 easyeffects
@@ -38,7 +40,6 @@ gnome-calendar
 go
 go-yq
 grim
-grimshot
 grub
 gtypist
 guvcview
@@ -101,6 +102,7 @@ rofi-wayland
 rofimoji
 rose-pine-cursor
 rose-pine-hyprcursor
+slurp
 stow
 swappy
 swww

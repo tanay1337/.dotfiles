@@ -78,7 +78,8 @@
        "format": "{icon} {capacity}%",
        "format-charging": "􀢋 {capacity}%",
        "format-icons": ["􀛪", "􀛩", "􀺶", "􀺸", "􀛨"],
-       "max-length": 25
+       "max-length": 25,
+       "on-click": "control --battery"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -90,7 +91,7 @@
             "headset": "",
             "default": ["􀊥", "􀊧", "􀊩"]
         },
-        "on-click": "control"
+        "on-click": "control --volume"
     },
     "clock": {
         "format": "{:%a %d. %b %I:%M %p}",

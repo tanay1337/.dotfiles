@@ -33,6 +33,10 @@ Some reference YouTube videos:
 - Set up [ufw](https://wiki.archlinux.org/title/Uncomplicated_Firewall). Apply [Forward Policy](https://wiki.archlinux.org/title/Uncomplicated_Firewall#Forward_policy) for using Wireguard.
 - For printing, add the user to the `lp` group using the following command: `sudo usermod -aG lp tanay` and reboot.
 - Instructions for getting the arduino LSP to work with nvim: [general instructions](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#arduino_language_server) and [workaround](https://github.com/arduino/arduino-language-server/pull/199#issuecomment-2519818108).
+- Instructions on setting up [hibernation with LUKS](https://gist.github.com/Iwwww/008ef082a52cc509d186889118412aa6).
+- Add the battery check cronjob.
+  - Enter the following command: `crontab -e`
+  - Add the following cronjob: `*/5 * * * * /home/tanay/.local/bin/battery_check`
 
 ## Enable services
 
@@ -47,4 +51,5 @@ This might not be an exhaustive list:
 - ufw
 - cups.service
 - avahi-daemon.service
+- cronie.service
 

@@ -10,15 +10,20 @@ CRITICAL_NOTIFICATION=/tmp/critical_notification
 NORMAL_NOTIFICATION=/tmp/normal_notification
 
 if [ $STATUS = 'Charging' ]; then
-  rm $CRITICAL_NOTIFICATION
-  rm $NORMAL_NOTIFICATION
+  if [ -f $CRITICAL_NOTIFICATION ]; then
+    rm $CRITICAL_NOTIFICATION
+  fi
+
+  if [ -f $NORMAL_NOTIFICATION ]; then
+    rm $NORMAL_NOTIFICATION
+  fi
 fi
 
 if [ $STATUS = 'Discharging' ]; then
-  if [ $BAT_LEVEL -lt 10 ] && [ ! -f $CRITICAL_NOTIFICATION ]; then
-    notify-send -u critical "Battery Low" "Your laptop will shut down soon. Please either charge your laptop or hibernate."
+  if [ $BAT_LEVEL -lt 12 ] && [ ! -f $CRITICAL_NOTIFICATION ]; then
+    notify-send -u critical "Battery Low" "Your laptop will hibernate soon."
     touch $CRITICAL_NOTIFICATION
-  elif [ $BAT_LEVEL -lt 20 ] && [ ! -f $NORMAL_NOTIFICATION ]; then
+  elif [ $BAT_LEVEL -lt 22 ] && [ ! -f $NORMAL_NOTIFICATION ]; then
     notify-send -u critical "Battery Low" "Please charge your laptop now."
     touch $NORMAL_NOTIFICATION
   fi

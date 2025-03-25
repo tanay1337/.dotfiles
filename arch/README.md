@@ -37,6 +37,8 @@ Some reference YouTube videos:
 - Add the battery check cronjob.
   - Enter the following command: `crontab -e`
   - Add the following cronjob: `*/5 * * * * /home/tanay/.local/bin/battery_check`
+  - Enter the following command: `sudo crontab -e`
+  - Add the following cronjob: `*/5 * * * * /home/tanay/.local/bin/low_battery_hibernate`
 
 ## Enable services
 

@@ -39,6 +39,11 @@ Some reference YouTube videos:
   - Add the following cronjob: `*/5 * * * * /home/tanay/.local/bin/battery_check`
   - Enter the following command: `sudo crontab -e`
   - Add the following cronjob: `*/5 * * * * /home/tanay/.local/bin/low_battery_hibernate`
+- For enabling three-finger drag:
+  - Enter the following command: `systemctl --user enable ydotool --now`
+  - Enter the following command for fusuma installation: `sudo gpasswd -a $USER input`
+  - Follow the instructions to add a [fusuma config](https://github.com/iberianpig/fusuma/issues/173#issuecomment-2058984377) and edit the service file. The last to last command will give you the location of the service file to edit.
+  - Follow the instructions to give the current user permissions to [uinput](https://stackoverflow.com/questions/11939255/writing-to-dev-uinput-on-ubuntu-12-04).
 
 ## Enable services
 

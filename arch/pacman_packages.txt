@@ -102,6 +102,7 @@ rofi-wayland
 rofimoji
 rose-pine-cursor
 rose-pine-hyprcursor
+ruby-fusuma
 slurp
 stow
 swappy
@@ -132,6 +133,7 @@ xdg-desktop-portal-hyprland
 xdg-user-dirs
 yay
 yay-debug
+ydotool
 zathura
 zathura-cb
 zathura-pdf-mupdf

@@ -9,7 +9,6 @@ base
 base-devel
 bat
 better-control-git
-blueman
 bluez
 bluez-utils
 brightnessctl

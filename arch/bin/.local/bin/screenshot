@@ -1,6 +1,8 @@
 #!/bin/bash
 
-AREA=$(slurp -o -d -c 0xFFFFFFFF)
+if [ -z $(pidof slurp) ]; then
+  AREA=$(slurp -o -d -c 0xFFFFFFFF)
+fi
 LOCATION="/home/tanay/Pictures/Screenshots/$(date).png"
 
 if [ ! -z "$AREA" ]; then

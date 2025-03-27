@@ -3,18 +3,19 @@
 wallpaper_directory="$HOME/Pictures/Wallpapers"
 wallpaper=$(swww query | cut -d ' ' -f8)
 focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{print name}')
+default_wallpaper="Tokyo_Pink.png"
 
 if [ -z "$1" ]; then
-    :
+    exit
 elif [ "$1" == "--random" ]; then
     wallpaper=$(find -L $wallpaper_directory -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" | sort -R | tail -n 1)
 elif [ "$1" == "--default" ]; then
-    wallpaper="$wallpaper_directory/Tokyo_Pink.png"
+    wallpaper="$wallpaper_directory/$default_wallpaper"
 else
     wallpaper="$wallpaper_directory/${1}"
 fi
 
 swww img -o $focused_monitor ${wallpaper}
-wal -s -i ${wallpaper}
+wal -s -i -e ${wallpaper}
 sleep 1
 ~/.local/bin/./wallpaper_hyprlock 

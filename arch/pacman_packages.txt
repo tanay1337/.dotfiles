@@ -52,6 +52,7 @@ hyprpicker
 ifuse
 iwd
 jq
+kdenlive
 lazygit
 lib32-libpulse
 libfprint

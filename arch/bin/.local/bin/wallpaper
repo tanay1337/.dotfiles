@@ -15,7 +15,7 @@ else
     wallpaper="$wallpaper_directory/${1}"
 fi
 
-swww img -o $focused_monitor ${wallpaper}
+swww img -o $focused_monitor ${wallpaper} --transition-type any
 wal -s -i -e ${wallpaper}
 sleep 1
 ~/.local/bin/./wallpaper_hyprlock 

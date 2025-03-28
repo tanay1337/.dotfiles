@@ -32,6 +32,7 @@ fwupd
 fzf
 gdm
 gdm-settings
+ghostscript
 git
 gnome-boxes
 gnome-calculator

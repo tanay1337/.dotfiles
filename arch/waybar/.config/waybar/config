@@ -35,7 +35,7 @@
     "custom/launcher": {
         "format": "{icon}",
         "format-icons": ["􀆨"],
-        "on-click": "wlogout",
+        "on-click": "better-control --power --minimal",
         "tooltip": false
     },
     "custom/kanji": {
@@ -79,7 +79,7 @@
        "format-charging": "􀢋 {capacity}%",
        "format-icons": ["􀛪", "􀛩", "􀺶", "􀺸", "􀛨"],
        "max-length": 25,
-       "on-click": "control --battery"
+       "on-click": "better-control --battery --minimal"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -91,7 +91,7 @@
             "headset": "",
             "default": ["􀊥", "􀊧", "􀊩"]
         },
-        "on-click": "control --volume"
+        "on-click": "better-control --volume --minimal"
     },
     "clock": {
         "format": "{:%a %d. %b %I:%M %p}",

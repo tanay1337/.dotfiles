@@ -127,7 +127,6 @@ waybar
 wine
 winetricks
 wireguard-tools
-wlogout
 wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland

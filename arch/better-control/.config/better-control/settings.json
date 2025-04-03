@@ -1,0 +1,20 @@
+{
+    "visibility": {
+        "gamma": 6500,
+        "power_mode": "power-saver",
+        "Battery": true,
+        "Autostart": true
+    },
+    "positions": {},
+    "last_active_tab": 5,
+    "gamma": 6500,
+    "tab_order": [
+        "Wi-Fi",
+        "Volume",
+        "Bluetooth",
+        "Battery",
+        "Display",
+        "Power",
+        "Autostart"
+    ]
+}

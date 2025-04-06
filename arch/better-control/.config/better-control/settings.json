@@ -3,10 +3,9 @@
         "gamma": 6500,
         "power_mode": "power-saver",
         "Battery": true,
-        "Autostart": true
+        "Autostart": false
     },
     "positions": {},
-    "last_active_tab": 1,
     "gamma": 6500,
     "tab_order": [
         "Wi-Fi",
@@ -15,6 +14,7 @@
         "Battery",
         "Display",
         "Power",
-        "Autostart"
+        "Autostart",
+        "USBGuard"
     ]
 }

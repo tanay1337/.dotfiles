@@ -22,11 +22,13 @@ cups
 easyeffects
 efibootmgr
 espeak
+evince
 eza
 fastfetch
 fd
 ffmpegthumbnailer
 file-roller
+foliate
 fprintd
 fwupd
 fzf
@@ -92,6 +94,7 @@ pokemon-colorscripts-git
 poketex
 polkit-gnome
 power-profiles-daemon
+python-pip
 python-pyaudio
 python-pywal16
 qt5-wayland
@@ -134,8 +137,5 @@ xdg-user-dirs
 yay
 yay-debug
 ydotool
-zathura
-zathura-cb
-zathura-pdf-mupdf
 zoxide
 zsh-theme-powerlevel10k-git

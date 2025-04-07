@@ -84,6 +84,7 @@ otf-font-awesome
 otf-ipafont
 pamixer
 papirus-icon-theme
+pdfarranger
 pik
 pika-backup
 pipewire-alsa

@@ -19,6 +19,7 @@ alias pokemon="pokemon-colorscripts -r"
 alias ff="fastfetch"
 alias whatsapp="librewolf --new-window 'web.whatsapp.com'"
 alias wa="whatsapp"
+alias discord="librewolf --new-window 'discord.com/app'"
 
 bindkey -s ^g "lazygit\n"
 

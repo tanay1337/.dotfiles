@@ -72,6 +72,7 @@ man-db
 man-pages
 mpv
 nautilus
+nautilus-open-any-terminal
 neovim
 networkmanager
 nodejs

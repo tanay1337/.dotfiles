@@ -28,6 +28,7 @@ fastfetch
 fd
 ffmpegthumbnailer
 file-roller
+flatpak
 foliate
 fprintd
 fwupd
@@ -55,7 +56,6 @@ hyprpicker
 ifuse
 iwd
 jq
-kdenlive
 lazygit
 lib32-libpulse
 libfprint

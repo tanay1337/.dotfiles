@@ -43,7 +43,7 @@ window {
     cursor:                     "default";
     spacing:                    0px;
     border:                     2px;
-    border-radius:              10px;
+    border-radius:              5px;
     location:                   center;
     anchor:                     center;
 

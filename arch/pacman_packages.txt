@@ -19,6 +19,7 @@ cliphist
 cronie
 cryptsetup
 cups
+d-spy
 easyeffects
 efibootmgr
 espeak

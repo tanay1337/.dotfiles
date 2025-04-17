@@ -4,6 +4,7 @@ amd-ucode
 apple-fonts
 arc-gtk-theme
 arduino-cli
+asciinema
 avizo
 base
 base-devel
@@ -30,7 +31,6 @@ fd
 ffmpegthumbnailer
 file-roller
 flatpak
-foliate
 fprintd
 fwupd
 fzf
@@ -116,6 +116,7 @@ swappy
 swww
 system-config-printer
 systemd-resolvconf
+taskman-git
 telegram-desktop
 texinfo
 tmux
@@ -124,6 +125,7 @@ topgrade
 ttf-hack-nerd
 tumbler
 ufw
+unimatrix-git
 usbguard
 usbmuxd
 usbutils

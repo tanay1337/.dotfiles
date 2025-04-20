@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Whatsapp
+Exec=librewolf --new-window 'web.whatsapp.com'
+Icon=~/Pictures/Icons/whatsapp.svg
+Type=Application

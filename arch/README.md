@@ -19,9 +19,6 @@ Some reference YouTube videos:
 - Clone this repo.
 - Stow all the folders in `arch` and also `wallpapers`.
 - Install all the packages.
-- SDDM instructions here: https://github.com/JaKooLit/simple-sddm (if not using GDM) 
-  - Edited theme file in `backups`. Needs to be moved to the right location.
-  - The Tokyo Pink wallpaper needs to be copied to the correct location.
 - Plymouth setup: https://wiki.archlinux.org/title/Plymouth along with the SDDM instructions.
 - Fingerprint setup: https://wiki.archlinux.org/title/Fprint
 - For random kanji: https://github.com/tanay1337/kanji-files-generator
@@ -45,12 +42,13 @@ Some reference YouTube videos:
   - Follow the instructions to add a [fusuma config](https://github.com/iberianpig/fusuma/issues/173#issuecomment-2058984377) and edit the service file. The last to last command will give you the location of the service file to edit.
   - Follow the instructions to give the current user permissions to [uinput](https://stackoverflow.com/questions/11939255/writing-to-dev-uinput-on-ubuntu-12-04).
 - Set Alacritty as the context menu terminal in Nautilus: `gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacritty`
+- Install Apple emojis: https://github.com/samuelngs/apple-emoji-linux
 
 ## Enable services
 
 This might not be an exhaustive list:
 - NetworkManager
-- SDDM/GDM
+- GDM
 - `timectl set-ntp true`
 - bluetooth
 - power-profiles-daemon

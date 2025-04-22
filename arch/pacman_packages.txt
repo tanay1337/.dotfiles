@@ -78,14 +78,12 @@ neovim
 networkmanager
 nodejs
 notejot
-noto-fonts-emoji
 npm
 obs-studio
 ollama
 otf-font-awesome
 otf-ipafont
 pamixer
-papirus-icon-theme
 pdfarranger
 pik
 pika-backup
@@ -120,6 +118,7 @@ taskman-git
 telegram-desktop
 texinfo
 tmux
+toimer-git
 tokei
 topgrade
 ttf-hack-nerd
@@ -132,6 +131,7 @@ usbutils
 vim
 vulkan-radeon
 waybar
+whitesur-icon-theme
 wine
 winetricks
 wireguard-tools

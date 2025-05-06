@@ -88,13 +88,6 @@ window#waybar.empty #window {
     color: #89b4fa;
 }
 
-#custom-launcher {
-    padding: 0rem 0.5rem;
-    border-radius: 5px;
-    margin: 0rem 0.15rem;
-    color: #f38ba8;
-}
-
 tooltip {
   background-color: #181825;
   border-radius: 5px;

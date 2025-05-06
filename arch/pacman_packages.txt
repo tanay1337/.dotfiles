@@ -4,7 +4,6 @@ amd-ucode
 apple-fonts
 arc-gtk-theme
 arduino-cli
-asciinema
 avizo
 base
 base-devel
@@ -20,7 +19,6 @@ cliphist
 cronie
 cryptsetup
 cups
-d-spy
 easyeffects
 efibootmgr
 espeak
@@ -38,14 +36,12 @@ gdm
 gdm-settings
 ghostscript
 git
-gnome-boxes
 gnome-calculator
 gnome-calendar
 go
 go-yq
 grim
 grub
-gtypist
 guvcview
 gvfs
 gvfs-afc
@@ -86,7 +82,6 @@ otf-ipafont
 pamixer
 pdfarranger
 pik
-pika-backup
 pipewire-alsa
 pipewire-audio
 pipewire-pulse
@@ -108,6 +103,7 @@ rofimoji
 rose-pine-cursor
 rose-pine-hyprcursor
 ruby-fusuma
+slack-desktop
 slurp
 stow
 swappy
@@ -119,7 +115,6 @@ telegram-desktop
 texinfo
 tmux
 toimer-git
-tokei
 topgrade
 ttf-hack-nerd
 tumbler
@@ -140,7 +135,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 yay
-yay-debug
 ydotool
 zoxide
 zsh-theme-powerlevel10k-git

@@ -5,9 +5,9 @@
     "reload_style_on_change": true,
 
     // Order of the modules
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": [],
-    "modules-right": ["group/hardware", "pulseaudio", "clock", "custom/launcher"],
+    "modules-right": ["group/hardware", "pulseaudio", "clock"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "persistent-workspaces": {
@@ -27,16 +27,6 @@
     		"9": "􀀁",
 		    "active": "􀧒"
         },
-    },
-    "hyprland/window": {
-        "icon": true,
-        "max-length": 40
-    },
-    "custom/launcher": {
-        "format": "{icon}",
-        "format-icons": ["􀆨"],
-        "on-click": "better-control --power --minimal",
-        "tooltip": false
     },
     "custom/kanji": {
         "format": "{}",

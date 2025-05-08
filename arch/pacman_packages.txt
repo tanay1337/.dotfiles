@@ -29,6 +29,7 @@ fd
 ffmpegthumbnailer
 file-roller
 flatpak
+font-manager
 fprintd
 fwupd
 fzf

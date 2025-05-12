@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Get the Kanji data
+random_file=$(find ~/Documents/kanji -name "*.json" | sort -R | tail -n 1)
+kanji_data=$(cat $random_file)
+
+character=$(echo $kanji_data | jq -r ".kanji")
+
+meaning=$(echo $kanji_data | jq -r ".meanings")
+
+kunyomi=$(echo $kanji_data | jq -r ".kunyomi")
+
+onyomi=$(echo $kanji_data | jq -r ".onyomi")
+
+echo $character
+echo -e "${meaning}\r${kunyomi}\r${onyomi}"
+echo "normal"

@@ -6,8 +6,7 @@ Place the `bgrt.plymouth` file in the `/usr/share/plymouth/themes/bgrt/` directo
 
 ## Theme images
 
-Place the three images (from the `images` folder) in the `/usr/share/plymouth/themes/spinner/` directory (replacing the existing file).
+- Place the three images (from the `images` folder) in the `/usr/share/plymouth/themes/spinner/` directory (replacing the existing file).
+- Remove the [text prompt](https://forum.endeavouros.com/t/how-remove-text-from-luks-prompt/63238/5) from the LUKS screen.
 
-## Extras
-
-- https://wiki.archlinux.org/title/Plymouth#Removing_text_under_the_password_prompt
+Remember to regenerate the mkinitcpio for changes to take effect.

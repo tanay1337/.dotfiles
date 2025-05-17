@@ -1,0 +1,104 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar at the bottom of your screen
+    "height": 28, // Waybar height
+    "reload_style_on_change": true,
+
+    // Order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["group/hardware", "pulseaudio", "clock"],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "persistent-workspaces": {
+            "*": 4
+        },
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+    		"1": "􀀁",
+    		"2": "􀀁",
+    		"3": "􀀁",
+    		"4": "􀀁",
+    		"5": "􀀁",
+    		"6": "􀀁",
+    		"7": "􀀁",
+    		"8": "􀀁",
+    		"9": "􀀁",
+		    "active": "􀧒"
+        },
+    },
+    "custom/kanji": {
+        "format": "{}",
+        "escape": true,
+        "exec": "~/.local/bin/./kanji",
+        "interval": 1800
+    },
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "battery",
+            "temperature",
+            "memory",
+            "cpu"
+        ]
+    },
+    "temperature": {
+       "format": "{icon} {temperatureC}°C",
+       "format-icons": ["􁏃", "􀇬", "􁏄"]
+    },
+    "memory": {
+        "format": "{icon} {0}%",
+        "format-icons": ["􀧖"]
+    },
+    "cpu": {
+       "format": "􀫥 {usage}%"
+    },
+    "battery": {
+       "interval": 60,
+       "states": {
+           "warning": 30,
+           "critical": 15
+       },
+       "format": "{icon} {capacity}%",
+       "format-charging": "􀢋 {capacity}%",
+       "format-icons": ["􀛪", "􀛩", "􀺶", "􀺸", "􀛨"],
+       "max-length": 25,
+       "on-click": "better-control --battery --minimal"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "􀊣 0%",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "default": ["􀊥", "􀊧", "􀊩"]
+        },
+        "on-click": "better-control --volume --minimal"
+    },
+    "clock": {
+        "format": "{:%a %d. %b %I:%M %p}",
+        "tooltip-format": "<span size='12pt' font='SF Mono'>{calendar}</span>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#ffffff'>{}</span>",
+                "days": "<span color='#ffead3'>{}</span>",
+                "weekdays": "<span color='#ffcc66'>{}</span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            },
+            "actions":  {
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+            }
+        },
+        "on-click": "gnome-calendar"
+    }
+}

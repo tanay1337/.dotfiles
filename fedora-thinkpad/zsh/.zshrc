@@ -15,12 +15,10 @@ alias ps="pik"
 alias hist="history -1 1 | fzf | awk '{for(i=2; i<NF; i++) {printf(\"%s \", \$i)} print \$NF}' | wtype -"
 alias top="btop"
 alias cat="bat"
-alias pokemon="pokemon-colorscripts -r"
 alias ff="fastfetch"
 alias whatsapp="librewolf --new-window 'web.whatsapp.com'"
 alias wa="whatsapp"
 alias discord="librewolf --new-window 'discord.com/app'"
-alias matrix="unimatrix"
 
 bindkey -s ^g "lazygit\n"
 

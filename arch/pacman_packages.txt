@@ -7,7 +7,7 @@ avizo
 base
 base-devel
 bat
-better-control-git
+blueberry
 bluez
 bluez-utils
 brightnessctl
@@ -76,6 +76,7 @@ obs-studio
 otf-font-awesome
 otf-ipafont
 pamixer
+pavucontrol
 pdfarranger
 pik
 pipewire-alsa
@@ -87,6 +88,7 @@ poketex
 polkit-gnome
 power-profiles-daemon
 python-pip
+python-pipx
 python-pyaudio
 python-pywal16
 qt5-wayland
@@ -126,6 +128,7 @@ whitesur-icon-theme
 wine
 winetricks
 wireguard-tools
+wlogout
 wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland

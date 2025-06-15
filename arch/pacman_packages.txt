@@ -72,10 +72,12 @@ neovim
 networkmanager
 nodejs
 npm
+nwg-look
 obs-studio
 otf-font-awesome
 otf-ipafont
 pamixer
+pavucontrol
 pdfarranger
 pik
 pipewire-alsa

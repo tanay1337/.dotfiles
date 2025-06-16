@@ -68,8 +68,7 @@
        "format": "{icon} {capacity}%",
        "format-charging": "􀢋 {capacity}%",
        "format-icons": ["􀛪", "􀛩", "􀺶", "􀺸", "􀛨"],
-       "max-length": 25,
-       "on-click": "better-control --battery --minimal"
+       "max-length": 25
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -81,7 +80,7 @@
             "headset": "",
             "default": ["􀊥", "􀊧", "􀊩"]
         },
-        "on-click": "better-control --volume --minimal"
+        "on-click": "pavucontrol"
     },
     "clock": {
         "format": "{:%a %d. %b %I:%M %p}",

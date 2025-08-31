@@ -55,33 +55,33 @@ window#waybar.empty #window {
 #tray,
 #memory,
 #window {
-  padding: 0rem 0.5rem;
-  border-radius: 6px;
-  margin: 0rem 0.15rem;
+    padding: 0rem 0.5rem;
+    border-radius: 6px;
+    margin: 0rem 0.15rem;
 }
 
 #cpu {
-  color: #d793a0;
+    color: #d793a0;
 }
 
 #memory {
-  color: #cba6f7;
+    color: #cba6f7;
 }
 
 #clock {
-  color: #f5c2e7;
+    color: #f5c2e7;
 }
 
 #window {
-  color: #f0bfe3;
+    color: #f0bfe3;
 }
 
 #pulseaudio {
-  color: #92dfd2;
+    color: #92dfd2;
 }
 
 #battery {
-  color: #c5a1f0;
+    color: #c5a1f0;
 }
 
 #temperature {
@@ -89,6 +89,6 @@ window#waybar.empty #window {
 }
 
 tooltip {
-  background-color: #181825;
-  border-radius: 5px;
+    background-color: #181825;
+    border-radius: 5px;
 }

@@ -35,3 +35,4 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Created by `pipx` on 2025-06-15 09:05:32
 export PATH="$PATH:/home/tanay/.dotfiles/arch/bin/.local/bin"
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

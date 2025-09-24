@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-current_wallpaper=$(swww query | cut -d ' ' -f8)
+current_wallpaper=$(swww query | cut -d ' ' -f9)
 sed -i -r "s#^(    path =).*#\1 $current_wallpaper#" ~/.config/hypr/hyprlock.conf

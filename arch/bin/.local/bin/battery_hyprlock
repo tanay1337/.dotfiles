@@ -1,7 +1,12 @@
 #!/bin/bash
 
-BAT_LEVEL=$(cat /sys/class/power_supply/BAT1/capacity)
-STATUS=$(cat /sys/class/power_supply/BAT1/status)
+case $HOSTNAME in
+  (thinkpad) BAT_DEVICE=BAT0;;
+  (framework) BAT_DEVICE=BAT1;;
+esac
+
+BAT_LEVEL=$(cat /sys/class/power_supply/$BAT_DEVICE/capacity)
+STATUS=$(cat /sys/class/power_supply/$BAT_DEVICE/status)
 
 if [ $STATUS = 'Discharging' ]; then
   if [ $BAT_LEVEL -lt 15 ]; then

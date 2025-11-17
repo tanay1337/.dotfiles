@@ -17,9 +17,6 @@ alias top="btop"
 alias cat="bat"
 alias pokemon="pokemon-colorscripts -r"
 alias ff="fastfetch"
-alias whatsapp="librewolf --new-window 'web.whatsapp.com'"
-alias wa="whatsapp"
-alias discord="librewolf --new-window 'discord.com/app'"
 alias matrix="unimatrix"
 
 bindkey -s ^g "lazygit\n"
@@ -36,3 +33,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # Created by `pipx` on 2025-06-15 09:05:32
 export PATH="$PATH:/home/tanay/.dotfiles/arch/bin/.local/bin"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# Created by `pipx` on 2025-10-10 07:00:40
+export PATH="$PATH:/home/tanay/.dotfiles/arch-thinkpad/bin/.local/bin"
+export PATH="$PATH:/home/tanay/.local/bin"

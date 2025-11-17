@@ -1,0 +1,12 @@
+#!/bin/bash
+
+case $HOSTNAME in
+  (thinkpad)
+	sed -i '3s/.*/source = ~\/.config\/hypr\/monitors\/thinkpad-monitors.conf/' ~/.config/hypr/monitors/select-device.conf
+	sed -i '7s/.*/source = ~\/.config\/hypr\/hyprlock\/thinkpad-hyprlock.conf/' ~/.config/hypr/hyprlock.conf
+	;;
+  (framework)
+	sed -i '3s/.*/source = ~\/.config\/hypr\/monitors\/framework-monitors.conf/' ~/.config/hypr/monitors/select-device.conf
+	sed -i '7s/.*/source = ~\/.config\/hypr\/hyprlock\/framework-hyprlock.conf/' ~/.config/hypr/hyprlock.conf
+	;;
+esac

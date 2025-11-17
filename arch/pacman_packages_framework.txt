@@ -3,11 +3,10 @@ amd-ucode
 apple-fonts
 arc-gtk-theme
 arduino-cli
-avizo
 base
 base-devel
 bat
-blueberry
+blueman
 bluez
 bluez-utils
 brightnessctl
@@ -15,7 +14,6 @@ btop
 cava
 clang
 cliphist
-cronie
 cryptsetup
 cups
 easyeffects
@@ -31,8 +29,6 @@ font-manager
 fprintd
 fwupd
 fzf
-gdm
-gdm-settings
 ghostscript
 git
 gnome-calculator
@@ -56,7 +52,6 @@ lazygit
 lib32-libpulse
 libfprint
 libnotify
-librewolf-bin
 linux
 linux-firmware
 loupe
@@ -97,11 +92,10 @@ qt6-5compat
 qt6-svg
 revc-git
 ripgrep
-rofi-wayland
+rofi
 rofimoji
 rose-pine-cursor
 rose-pine-hyprcursor
-ruby-fusuma
 slack-desktop
 slurp
 stow
@@ -135,6 +129,5 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 yay
-ydotool
 zoxide
 zsh-theme-powerlevel10k-git

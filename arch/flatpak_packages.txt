@@ -1,8 +1,0 @@
-org.freedesktop.LinuxAudio.Plugins.TAP
-org.freedesktop.LinuxAudio.Plugins.swh
-org.freedesktop.Platform.GL.default
-org.freedesktop.Platform.GL.default
-org.gtk.Gtk3theme.Arc-Dark
-org.gtk.Gtk3theme.Arc-Darker
-org.kde.Platform
-org.kde.kdenlive

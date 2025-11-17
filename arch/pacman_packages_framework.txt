@@ -24,6 +24,7 @@ fastfetch
 fd
 ffmpegthumbnailer
 file-roller
+firefox
 flatpak
 font-manager
 fprintd
@@ -78,7 +79,6 @@ pik
 pipewire-alsa
 pipewire-audio
 pipewire-pulse
-plymouth
 pokemon-colorscripts-git
 poketex
 polkit-gnome

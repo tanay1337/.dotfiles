@@ -1,5 +1,7 @@
+0ad
 7zip
 alacritty
+alsa-firmware
 alsa-utils
 arc-gtk-theme
 base
@@ -10,6 +12,7 @@ bluez
 bluez-utils
 brightnessctl
 btop
+cantarell-fonts
 cliphist
 cryptsetup
 efibootmgr
@@ -27,7 +30,6 @@ fwupd
 fzf
 git
 gnome-calculator
-gnome-calendar
 grim
 grub
 guvcview
@@ -71,7 +73,6 @@ rofi
 rofimoji
 rose-pine-cursor
 rose-pine-hyprcursor
-ruby
 slack-desktop
 slurp
 sof-firmware
@@ -79,13 +80,14 @@ stow
 swappy
 swww
 telegram-desktop
+terminus-font
+tldr
 topgrade
 ttf-hack-nerd
 tumbler
 unzip
 waybar
 whitesur-icon-theme
-wlogout
 wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Starting options
+MAIN_OPTION=$(printf "📝 Create a new note\n📒 Open existing notes" | rofi -dmenu)
+
+if [ "$MAIN_OPTION" = "📝 Create a new note" ]; then
+    NOTE_NAME=$(rofi -dmenu)
+    if [ -z "$NOTE_NAME" ]; then
+	exit
+    fi
+    DIRECTORY=$(dirname $NOTE_NAME)
+    mkdir -p ~/Notes/$DIRECTORY
+    touch ~/Notes/$NOTE_NAME.org
+    emacs ~/Notes/$NOTE_NAME.org
+elif [ "$MAIN_OPTION" = "📒 Open existing notes" ]; then
+    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | rofi -dmenu)
+    if [ -z "$NOTES" ]; then
+	exit
+    fi
+    emacs ~/Notes/$NOTES
+fi

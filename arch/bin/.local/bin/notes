@@ -13,7 +13,7 @@ if [ "$MAIN_OPTION" = "📝 Create a new note" ]; then
     touch ~/Notes/$NOTE_NAME.org
     emacs ~/Notes/$NOTE_NAME.org
 elif [ "$MAIN_OPTION" = "📒 Open existing notes" ]; then
-    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | rofi -dmenu)
+    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | rofi -dmenu -i)
     if [ -z "$NOTES" ]; then
 	exit
     fi

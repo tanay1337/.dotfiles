@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Powermenu options
+SELECTION=$(printf "🔒 Lock\n👋 Logout\n⏺️ Reboot\n📴 Shutdown\n⏸️ Suspend\n💤 Hibernate" | rofi -dmenu -i)
+
+case "$SELECTION" in
+  ("🔒 Lock") pidof hyprlock || hyprlock;;
+  ("👋 Logout") pkill Hyprland || loginctl kill-session $XDG_SESSION_ID;;
+  ("⏺️ Reboot") systemctl reboot;;
+  ("📴 Shutdown") systemctl poweroff;;
+  ("⏸️ Suspend") systemctl sleep;;
+  ("💤 Hibernate") systemctl hibernate;;
+esac

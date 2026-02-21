@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Starting options
-MAIN_OPTION=$(printf "📝 Create a new note\n📒 Open existing notes\n🚮 Delete notes" | rofi -dmenu)
+MAIN_OPTION=$(printf "📝 Create a new note\n📒 Open existing notes\n🚮 Delete notes" | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Manage notes";}')
 
 if [ "$MAIN_OPTION" = "📝 Create a new note" ]; then
-    NOTE_NAME=$(rofi -dmenu)
+    NOTE_NAME=$(rofi -dmenu -theme-str 'entry {placeholder:"✏️ Enter note name";}')
     if [ -z "$NOTE_NAME" ]; then
 	exit
     fi
@@ -13,15 +13,15 @@ if [ "$MAIN_OPTION" = "📝 Create a new note" ]; then
     touch ~/Notes/$NOTE_NAME.org
     (pidof emacs && emacsclient -n -c ~/Notes/$NOTE_NAME.org) || (emacs --daemon && emacsclient -n -c ~/Notes/$NOTE_NAME.org)
 elif [ "$MAIN_OPTION" = "📒 Open existing notes" ]; then
-    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | rofi -dmenu -i)
+    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 | rofi -dmenu -i)
     if [ -z "$NOTES" ]; then
 	exit
     fi
-    (pidof emacs && emacsclient -n -c ~/Notes/$NOTES) || (emacs --daemon && emacsclient -n -c ~/Notes/$NOTES)
+    (pidof emacs && emacsclient -n -c ~/Notes/$NOTES.org) || (emacs --daemon && emacsclient -n -c ~/Notes/$NOTES.org)
 elif [ "$MAIN_OPTION" = "🚮 Delete notes" ]; then
-    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | rofi -dmenu -i)
+    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 | rofi -dmenu -i)
     if [ -z "$NOTES" ]; then
 	exit
     fi
-    rm ~/Notes/$NOTES
+    rm ~/Notes/$NOTES.org
 fi

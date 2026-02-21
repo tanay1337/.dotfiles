@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Powermenu options
-SELECTION=$(printf "🔒 Lock\n👋 Logout\n⏺️ Reboot\n📴 Shutdown\n⏸️ Suspend\n💤 Hibernate" | rofi -dmenu -i)
+SELECTION=$(printf "🔒 Lock\n👋 Logout\n⏺️ Reboot\n📴 Shutdown\n⏸️ Suspend\n💤 Hibernate" | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Manage system";}')
 
 case "$SELECTION" in
   ("🔒 Lock") pidof hyprlock || hyprlock;;

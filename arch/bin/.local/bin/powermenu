@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Powermenu options
-SELECTION=$(printf "🔒 Lock\n👋 Logout\n⏺️ Reboot\n📴 Shutdown\n⏸️ Suspend\n💤 Hibernate" | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Manage system";}')
+SELECTION=$(printf "Lock\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/lock.png\nLogout\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/logout.png\nReboot\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/reboot.png\nShutdown\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/power-off.png\nSuspend\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/pause-button.png\nHibernate\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/hibernation.png" | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Manage system";}')
 
 case "$SELECTION" in
-  ("🔒 Lock") pidof hyprlock || hyprlock;;
-  ("👋 Logout") pkill Hyprland || loginctl kill-session $XDG_SESSION_ID;;
-  ("⏺️ Reboot") systemctl reboot;;
-  ("📴 Shutdown") systemctl poweroff;;
-  ("⏸️ Suspend") systemctl sleep;;
-  ("💤 Hibernate") systemctl hibernate;;
+  ("Lock") pidof hyprlock || hyprlock;;
+  ("Logout") pkill Hyprland || loginctl kill-session $XDG_SESSION_ID;;
+  ("Reboot") systemctl reboot;;
+  ("Shutdown") systemctl poweroff;;
+  ("Suspend") systemctl sleep;;
+  ("Hibernate") systemctl hibernate;;
 esac

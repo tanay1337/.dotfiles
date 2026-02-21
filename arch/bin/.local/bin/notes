@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Starting options
-MAIN_OPTION=$(printf "📝 Create a new note\n📒 Open existing notes\n🚮 Delete notes" | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Manage notes";}')
+MAIN_OPTION=$(printf "Create a new note\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/new-note.png\nOpen existing notes\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/open-notes.png\nDelete notes\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/delete-notes.png" | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Manage notes";}')
 
-if [ "$MAIN_OPTION" = "📝 Create a new note" ]; then
+if [ "$MAIN_OPTION" = "Create a new note" ]; then
     NOTE_NAME=$(rofi -dmenu -theme-str 'entry {placeholder:"✏️ Enter note name";}')
     if [ -z "$NOTE_NAME" ]; then
 	exit
@@ -12,14 +12,14 @@ if [ "$MAIN_OPTION" = "📝 Create a new note" ]; then
     mkdir -p ~/Notes/$DIRECTORY
     touch ~/Notes/$NOTE_NAME.org
     (pidof emacs && emacsclient -n -c ~/Notes/$NOTE_NAME.org) || (emacs --daemon && emacsclient -n -c ~/Notes/$NOTE_NAME.org)
-elif [ "$MAIN_OPTION" = "📒 Open existing notes" ]; then
-    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 | rofi -dmenu -i)
+elif [ "$MAIN_OPTION" = "Open existing notes" ]; then
+    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 | awk '{print $1 "\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/note.png"}' | rofi -dmenu -i)
     if [ -z "$NOTES" ]; then
 	exit
     fi
     (pidof emacs && emacsclient -n -c ~/Notes/$NOTES.org) || (emacs --daemon && emacsclient -n -c ~/Notes/$NOTES.org)
-elif [ "$MAIN_OPTION" = "🚮 Delete notes" ]; then
-    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 | rofi -dmenu -i)
+elif [ "$MAIN_OPTION" = "Delete notes" ]; then
+    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 | awk '{print $1 "\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/delete-note.png"}' | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Delete notes";}')
     if [ -z "$NOTES" ]; then
 	exit
     fi

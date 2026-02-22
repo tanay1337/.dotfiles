@@ -1,27 +1,47 @@
 #!/bin/bash
 
-# Starting options
-MAIN_OPTION=$(printf "Create a new note\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/new-note.png\nOpen existing notes\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/open-notes.png\nDelete notes\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/delete-notes.png" | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Manage notes";}')
+# Define icon dorectory location
+ICON_DIR="$HOME/Pictures/Icons"
 
-if [ "$MAIN_OPTION" = "Create a new note" ]; then
-    NOTE_NAME=$(rofi -dmenu -theme-str 'entry {placeholder:"✏️ Enter note name";}')
-    if [ -z "$NOTE_NAME" ]; then
+# Starting options
+MAIN_OPTION=$(printf "Create a new note\0icon\x1fthumbnail:///$ICON_DIR/new-note.png\nOpen existing notes\0icon\x1fthumbnail:///$ICON_DIR/open-notes.png\nDelete notes\0icon\x1fthumbnail:///$ICON_DIR/delete-notes.png" | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Manage notes";}')
+
+# Retrieve notes
+get_notes() {
+    find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 |
+	awk -v icon="$1" -v dir="$ICON_DIR" '{print $1 "\0icon\x1fthumbnail:///" dir "/" icon ".png"}' | rofi -dmenu -i
+}
+
+# Exit if no note was passed
+exit_no_selection() {
+    if [ -z "$1" ]; then
 	exit
     fi
+}
+
+# Open a note in emacs
+open_in_emacs() {
+    (pidof emacs && emacsclient -n -c ~/Notes/$1.org) || (emacs --daemon && emacsclient -n -c ~/Notes/$1.org)
+}
+
+# Handle operation based on selection
+if [ "$MAIN_OPTION" = "Create a new note" ]; then
+    NOTE_NAME=$(rofi -dmenu -theme-str 'entry {placeholder:"✏️ Enter note name";}')
+    exit_no_selection $NOTE_NAME
+
     DIRECTORY=$(dirname $NOTE_NAME)
     mkdir -p ~/Notes/$DIRECTORY
     touch ~/Notes/$NOTE_NAME.org
-    (pidof emacs && emacsclient -n -c ~/Notes/$NOTE_NAME.org) || (emacs --daemon && emacsclient -n -c ~/Notes/$NOTE_NAME.org)
+
+    open_in_emacs $NOTE_NAME
 elif [ "$MAIN_OPTION" = "Open existing notes" ]; then
-    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 | awk '{print $1 "\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/note.png"}' | rofi -dmenu -i)
-    if [ -z "$NOTES" ]; then
-	exit
-    fi
-    (pidof emacs && emacsclient -n -c ~/Notes/$NOTES.org) || (emacs --daemon && emacsclient -n -c ~/Notes/$NOTES.org)
+    NOTE_NAME=$(get_notes "note")
+    exit_no_selection $NOTE_NAME
+
+    open_in_emacs $NOTE_NAME
 elif [ "$MAIN_OPTION" = "Delete notes" ]; then
-    NOTES=$(find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 | awk '{print $1 "\0icon\x1fthumbnail:///home/tanay/Pictures/Icons/delete-note.png"}' | rofi -dmenu -i -theme-str 'entry {placeholder:"􀊫 Delete notes";}')
-    if [ -z "$NOTES" ]; then
-	exit
-    fi
-    rm ~/Notes/$NOTES.org
+    NOTE_NAME=$(get_notes "delete-note")
+    exit_no_selection $NOTE_NAME
+
+    rm ~/Notes/$NOTE_NAME.org
 fi

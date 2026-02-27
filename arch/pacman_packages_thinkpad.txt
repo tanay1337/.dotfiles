@@ -40,12 +40,16 @@ hyprpicker
 img2pdf
 intel-ucode
 jq
+kew
 lazygit
 libnl1
 libnotify
+libresprite
 linux
 linux-firmware
+localsend-bin
 loupe
+lutris
 lvm2
 mako
 mpv
@@ -76,6 +80,7 @@ rose-pine-hyprcursor
 slack-desktop
 slurp
 sof-firmware
+steam
 stow
 swappy
 swww
@@ -86,7 +91,9 @@ topgrade
 ttf-hack-nerd
 tumbler
 unzip
+vulkan-intel
 waybar
+wev
 whitesur-icon-theme
 wtype
 xdg-desktop-portal-gtk

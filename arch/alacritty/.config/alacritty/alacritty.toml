@@ -29,3 +29,8 @@ history = 50000
 
 [window]
 opacity = 0.90
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

@@ -3,6 +3,7 @@
 alacritty
 alsa-firmware
 alsa-utils
+android-tools
 arc-gtk-theme
 base
 base-devel
@@ -15,6 +16,8 @@ btop
 cantarell-fonts
 cliphist
 cryptsetup
+docker
+docker-compose
 efibootmgr
 emacs-wayland
 evince
@@ -40,7 +43,6 @@ hyprpicker
 img2pdf
 intel-ucode
 jq
-kew
 lazygit
 libnl1
 libnotify
@@ -60,6 +62,8 @@ networkmanager
 nodejs
 npm
 nwg-look
+ollama
+opencode
 otf-font-awesome
 otf-ipafont
 pamixer
@@ -77,6 +81,7 @@ rofi
 rofimoji
 rose-pine-cursor
 rose-pine-hyprcursor
+rustnet
 slack-desktop
 slurp
 sof-firmware
@@ -89,11 +94,11 @@ terminus-font
 tldr
 topgrade
 ttf-hack-nerd
+ttf-nerd-fonts-symbols-mono
 tumbler
 unzip
 vulkan-intel
 waybar
-wev
 whitesur-icon-theme
 wtype
 xdg-desktop-portal-gtk

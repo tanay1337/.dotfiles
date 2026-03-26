@@ -5,6 +5,7 @@ alsa-firmware
 alsa-utils
 android-tools
 arc-gtk-theme
+awww
 base
 base-devel
 bat
@@ -16,8 +17,6 @@ btop
 cantarell-fonts
 cliphist
 cryptsetup
-docker
-docker-compose
 efibootmgr
 emacs-wayland
 evince
@@ -88,7 +87,6 @@ sof-firmware
 steam
 stow
 swappy
-swww
 telegram-desktop
 terminus-font
 tldr

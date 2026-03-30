@@ -17,6 +17,7 @@ btop
 cantarell-fonts
 cliphist
 cryptsetup
+dmidecode
 efibootmgr
 emacs-wayland
 evince
@@ -80,6 +81,7 @@ rofi
 rofimoji
 rose-pine-cursor
 rose-pine-hyprcursor
+ruby
 rustnet
 slack-desktop
 slurp
@@ -90,6 +92,7 @@ swappy
 telegram-desktop
 terminus-font
 tldr
+toimer-git
 topgrade
 ttf-hack-nerd
 ttf-nerd-fonts-symbols-mono
@@ -105,6 +108,7 @@ xdg-user-dirs
 xournalpp
 yay
 yt-dlp
+zip
 zoxide
 zsh
 zsh-theme-powerlevel10k-git

@@ -8,7 +8,7 @@ MAIN_OPTION=$(printf "Create a new note\0icon\x1fthumbnail:///$ICON_DIR/new-note
 
 # Retrieve notes
 get_notes() {
-    find ~/Notes -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 |
+    find ~/Documents -name "*.org" | cut -sd / -f 5- | cut -d "." -f 1 |
 	awk -v icon="$1" -v dir="$ICON_DIR" '{print $1 "\0icon\x1fthumbnail:///" dir "/" icon ".png"}' | rofi -dmenu -i
 }
 
@@ -21,7 +21,7 @@ exit_no_selection() {
 
 # Open a note in emacs
 open_in_emacs() {
-    (pidof emacs && emacsclient -n -c ~/Notes/$1.org) || (emacs --daemon && emacsclient -n -c ~/Notes/$1.org)
+    (pidof emacs && emacsclient -n -c ~/Documents/$1.org) || (emacs --daemon && emacsclient -n -c ~/Documents/$1.org)
 }
 
 # Handle operation based on selection
@@ -30,8 +30,8 @@ if [ "$MAIN_OPTION" = "Create a new note" ]; then
     exit_no_selection $NOTE_NAME
 
     DIRECTORY=$(dirname $NOTE_NAME)
-    mkdir -p ~/Notes/$DIRECTORY
-    touch ~/Notes/$NOTE_NAME.org
+    mkdir -p ~/Documents/$DIRECTORY
+    touch ~/Documents/$NOTE_NAME.org
 
     open_in_emacs $NOTE_NAME
 elif [ "$MAIN_OPTION" = "Open existing notes" ]; then
@@ -43,5 +43,5 @@ elif [ "$MAIN_OPTION" = "Delete notes" ]; then
     NOTE_NAME=$(get_notes "delete-note")
     exit_no_selection $NOTE_NAME
 
-    rm ~/Notes/$NOTE_NAME.org
+    rm ~/Documents/$NOTE_NAME.org
 fi

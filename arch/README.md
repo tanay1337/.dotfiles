@@ -24,7 +24,6 @@ Some reference YouTube videos:
 yay -S $(cat pacman_packages_DEVICE.txt)
 ```
 - Fingerprint setup: https://wiki.archlinux.org/title/Fprint
-- Add the pacman hook (`backups/grub.hook`) for removing the boot text from GRUB.
 - Set [GRUB password](https://wiki.archlinux.org/title/GRUB/Tips_and_tricks#Password_protection_of_GRUB_menu) and add a [pacman hook](https://wiki.archlinux.org/title/Talk:GRUB/Tips_and_tricks#Password_protection_of_non_local_system_boot_options) for unrestricted entry to boot into Arch.
 - Set BIOS password and disable booting from USB devices (if on a new device).
 - Generate [device policy](https://wiki.archlinux.org/title/USBGuard) for usbguard.

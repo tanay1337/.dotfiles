@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Discord
-Exec=librewolf --new-window 'discord.com/app'
+Exec=firefox --new-window 'discord.com/app'
 Icon=~/Pictures/Icons/discord.svg
 Type=Application

@@ -17,42 +17,18 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 local plugins = {
-	"nvim-treesitter/nvim-treesitter",
 	"windwp/nvim-autopairs",
 	"numToStr/Comment.nvim",
 	"nmac427/guess-indent.nvim",
 	"lewis6991/gitsigns.nvim",
 	"mbbill/undotree",
-	"laytan/cloak.nvim",
-	"mfussenegger/nvim-dap",
 	"sbdchd/neoformat",
 	"folke/which-key.nvim",
 	{ 'echasnovski/mini.indentscope', version = '*' },
 	{
-		'MeanderingProgrammer/render-markdown.nvim',
-		dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' },
-		---@module 'render-markdown'
-		---@type render.md.UserConfig
-		opts = {},
-	},
-	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {}
-	},
-	{
 		"folke/persistence.nvim",
 		event = "BufReadPre", -- this will only start session saving when an actual file was opened
 		opts = {}
-	},
-	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-		build = "cd app && npm install",
-		init = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
 	},
 	{
 		"kosayoda/nvim-lightbulb",
@@ -63,14 +39,6 @@ local plugins = {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons", -- optional
 		},
-	},
-	{
-		"roobert/tailwindcss-colorizer-cmp.nvim",
-		config = function()
-			require("tailwindcss-colorizer-cmp").setup({
-				color_square_width = 4,
-			})
-		end,
 	},
 	{
 		"CosmicNvim/cosmic-ui",
@@ -190,27 +158,6 @@ require("mason-lspconfig").setup()
 require("nvim-lightbulb").setup({ autocmd = { enabled = true } })
 require('mini.indentscope').setup()
 
-require("nvim-treesitter.configs").setup {
-	highlight = {
-		enable = true,
-	},
-	ensure_installed = {
-		"javascript",
-		"typescript",
-		"python",
-		"tsx",
-		"css",
-		"json",
-		"lua",
-		"rust",
-		"go",
-		"vim",
-	},
-	sync_install = false,
-	auto_install = true,
-	ignore_install = {},
-}
-
 require("gitsigns").setup({
 	signs = {
 		add = { text = "▎" },
@@ -231,26 +178,5 @@ require("nvim-tree").setup({
 	},
 	filters = {
 		dotfiles = false,
-	},
-})
-
-require("cloak").setup({
-	enabled = true,
-	cloak_character = "*",
-	-- The applied highlight group (colors) on the cloaking, see `:h highlight`.
-	highlight_group = "Comment",
-	-- Applies the length of the replacement characters for all matched
-	-- patterns, defaults to the length of the matched pattern.
-	cloak_length = nil, -- Provide a number if you want to hide the true length of the value.
-	patterns = {
-		{
-			-- Match any file starting with '.env'.
-			-- This can be a table to match multiple file patterns.
-			file_pattern = ".env*",
-			-- Match an equals sign and any character after it.
-			-- This can also be a table of patterns to cloak,
-			-- example: cloak_pattern = { ':.+', '-.+' } for yaml files.
-			cloak_pattern = "=.+",
-		},
 	},
 })

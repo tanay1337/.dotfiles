@@ -1,6 +1,5 @@
 local lsp = require("lsp-zero")
 local mason = require("mason-lspconfig")
-local lspconfig = require("lspconfig")
 
 lsp.preset("recommended")
 
@@ -73,53 +72,6 @@ lsp.on_attach(function(client, bufnr)
 	end, { buffer = bufnr, remap = false, desc = "Signature help" })
 end)
 
-lspconfig["lua_ls"].setup({
-	settings = {
-		Lua = {
-			runtime = {
-				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-				version = "LuaJIT",
-			},
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = { "vim" },
-			},
-			workspace = {
-				-- Make the server aware of Neovim runtime files
-				library = vim.api.nvim_get_runtime_file("", true),
-			},
-			-- Do not send telemetry data containing a randomized but unique identifier
-			telemetry = {
-				enable = false,
-			},
-		},
-	},
-})
-
-lspconfig["rust_analyzer"].setup({
-	settings = {
-		["rust-analyzer"] = {
-			cargo = {
-				allFeatures = true,
-			},
-		},
-	},
-})
-
-lspconfig["arduino_language_server"].setup({
-	capabilities = {
-		textDocument = {
-			semanticTokens = vim.NIL
-		},
-		workspace = {
-			semanticTokens = vim.NIL
-		}
-	},
-	cmd = {
-		"arduino-language-server"
-	}
-})
-
 lsp.setup()
 
 local ls = require("luasnip")
@@ -184,9 +136,6 @@ cmp.setup({
 			kind.kind = " " .. (strings[1] or "") .. " "
 			kind.menu = "    (" .. (strings[2] or "") .. ")"
 
-			local twitem = require("tailwindcss-colorizer-cmp").formatter(entry, kind)
-
-			return twitem
 		end,
 	},
 })

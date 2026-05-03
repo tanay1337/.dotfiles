@@ -13,7 +13,6 @@ btop
 cliphist
 cryptsetup
 efibootmgr
-emacs-wayland
 evince
 eza
 fastfetch
@@ -29,10 +28,12 @@ hyprland
 hyprlock
 hyprpicker
 intel-ucode
+jq
 lazygit
 libnotify
 linux
 linux-firmware
+llama.cpp-vulkan
 localsend-bin
 loupe
 lutris
@@ -45,7 +46,9 @@ nautilus
 nautilus-open-any-terminal
 neovim
 networkmanager
+npm
 nwg-look
+opencode
 otf-ipafont
 pamixer
 pavucontrol
@@ -54,6 +57,7 @@ pik
 pipewire-pulse
 polkit-gnome
 power-profiles-daemon
+python-pip
 python-pywal
 rofi
 rofimoji
@@ -69,6 +73,7 @@ terminus-font
 texinfo
 tldr
 toimer-git
+tokyo-notes-git
 topgrade
 ttf-hack-nerd
 waybar
@@ -77,6 +82,7 @@ wtype
 xdg-desktop-portal-gtk
 xdg-user-dirs
 yay
+zed
 zoxide
 zsh
 zsh-theme-powerlevel10k-git

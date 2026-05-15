@@ -28,12 +28,6 @@
 		    "active": "􀧒"
         },
     },
-    "custom/kanji": {
-        "format": "{}",
-        "escape": true,
-        "exec": "~/.local/bin/./kanji",
-        "interval": 1800
-    },
     "group/hardware": {
         "orientation": "inherit",
         "drawer": {

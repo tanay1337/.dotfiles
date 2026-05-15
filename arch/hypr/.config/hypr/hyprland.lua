@@ -5,6 +5,7 @@ require("hyprlandConf.keybinds")
 require("hyprlandConf.autostart")
 require("hyprlandConf.env")
 
+
 ------------------
 ---- MONITORS ----
 ------------------
@@ -147,8 +148,15 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper = 1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = 1,
+        disable_hyprland_logo   = true,
+    },
+    ecosystem = {
+	no_update_news = true,
+	no_donation_nag = true,
+    },
+    xwayland = {
+	force_zero_scaling = true,
     },
 })
 
@@ -171,6 +179,7 @@ hl.config({
 
         touchpad = {
             natural_scroll = true,
+	    tap_and_drag = false,
         },
     },
 })
@@ -208,15 +217,6 @@ hl.window_rule({
 
     no_focus = true,
 })
-
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
-
 
 -- Window rules for floating applications
 hl.window_rule({

@@ -82,7 +82,6 @@ wtype
 xdg-desktop-portal-gtk
 xdg-user-dirs
 yay
-zed
 zoxide
 zsh
 zsh-theme-powerlevel10k-git

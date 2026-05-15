@@ -1,0 +1,1 @@
+~/.local/bin/./wallpaper "$(ls ~/Pictures/Wallpapers/ | while read A ; do  echo -en "$A\x00icon\x1f~/Pictures/Wallpapers/$A\n"; done | rofi -dmenu -config ~/.config/rofi/config-wallpaper.rasi)"

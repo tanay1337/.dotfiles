@@ -6,14 +6,9 @@ local keymap = vim.keymap
 
 keymap.set("n", "<leader>pv", ":Ex<cr>", { desc = "Open project view" })
 keymap.set("n", "<leader>u", ":UndotreeToggle<cr>", { desc = "Toggle undo tree" })
-keymap.set("n", "<leader>ct", ":CloakToggle<cr>", { desc = "Toggle secrets cloak" })
 
 keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode" })
 keymap.set("n", "<leader>nh", ":nohl<cr>", { desc = "Clear search highlights" })
-
--- Markdown preview
-keymap.set("n", "<leader>mds", ":MarkdownPreview<cr>", { desc = "Start markdown preview" })
-keymap.set("n", "<leader>mdc", ":MarkdownPreviewStop<cr>", { desc = "Close markdown preview" })
 
 -- Increment and decrement numbers
 keymap.set("n", "<leader>+" ,"<C-a>", { desc = "Increment number" })
@@ -24,9 +19,6 @@ keymap.set("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Open La
 
 -- Terminal
 keymap.set("n", "<leader>tt", function() Snacks.terminal() end, { desc = "Toggle terminal" })
-
--- Todo list
-keymap.set("n", "<leader>tl", ":TodoTelescope<cr>", { desc = "Open ToDo List" })
 
 -- Windows
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split windows vertically" })
@@ -53,9 +45,6 @@ keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", { desc = "Find files"
 keymap.set("n", "<leader>fw", ":Telescope live_grep<cr>", { desc = "Find word" })
 keymap.set("n", "<leader>fr", ":Telescope oldfiles<cr>", { desc = "Find recent files" })
 keymap.set("n", "<leader>fg", ":Telescope git_files<cr>", { desc = "Find files tracked by git" })
-
--- Treesitter playground toggle
-keymap.set("n", "<leader>pt", ":TSPlaygroundToggle<cr>", { desc = "Toggle Treesitter playground" })
 
 -- Keep cursor in middle when jumping half pages with C-d and C-u
 keymap.set("n", "<C-d>", "<C-d>zz")

@@ -25,121 +25,66 @@ lsp.set_sign_icons({
 	info = "»",
 })
 
----@diagnostic disable-next-line: unused-local
-lsp.on_attach(function(client, bufnr)
-	vim.keymap.set("n", "gd", function()
-		vim.lsp.buf.definition()
-	end, { buffer = bufnr, remap = false, desc = "Go to definition" })
+-- note: diagnostics are not exclusive to lsp servers
+-- so these can be global keybindings
+vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
+vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
+vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>') 
 
-	vim.keymap.set("n", "K", function()
-		vim.lsp.buf.hover()
-	end, { buffer = bufnr, remap = false, desc = "Hover" })
+vim.api.nvim_create_autocmd('LspAttach', {
+  desc = 'LSP actions',
+  callback = function(event)
+    local opts = {buffer = event.buf}
 
-	vim.keymap.set("n", "<leader>vws", function()
-		vim.lsp.buf.workspace_symbol()
-	end, { buffer = bufnr, remap = false, desc = "View workspace symbols" })
+    -- these will be buffer-local keybindings
+    -- because they only work if you have an active language server
 
-	vim.keymap.set("n", "<leader>vd", function()
-		vim.diagnostic.open_float()
-	end, { buffer = bufnr, remap = false, desc = "View diagnostics" })
-
-	vim.keymap.set("n", "[d", function()
-		vim.diagnostic.goto_next()
-	end, { buffer = bufnr, remap = false, desc = "View next diagnostic" })
-
-	vim.keymap.set("n", "]d", function()
-		vim.diagnostic.goto_prev()
-	end, { buffer = bufnr, remap = false, desc = "View previous diagnostic" })
-
-	vim.keymap.set("n", "<leader>ca", function()
-		require("cosmic-ui").code_actions()
-	end, { buffer = bufnr, remap = false, desc = "Show code actions" })
-
-	vim.keymap.set("v", "<leader>ca", function()
-		require("cosmic-ui").range_code_actions()
-	end, { buffer = bufnr, remap = false, desc = "Show code actions" })
-
-	vim.keymap.set("n", "<leader>vrr", function()
-		vim.lsp.buf.references()
-	end, { buffer = bufnr, remap = false, desc = "View references" })
-
-	vim.keymap.set("n", "<leader>vrn", function()
-		vim.lsp.buf.rename()
-	end, { buffer = bufnr, remap = false, desc = "Rename" })
-
-	vim.keymap.set("i", "<C-h>", function()
-		vim.lsp.buf.signature_help()
-	end, { buffer = bufnr, remap = false, desc = "Signature help" })
-end)
-
-lsp.setup()
-
-local ls = require("luasnip")
-require("luasnip.loaders.from_vscode").lazy_load()
-
-vim.keymap.set({ "i", "s" }, "<c-k>", function()
-	if ls.expand_or_jumpable() then
-		ls.expand_or_jump()
-	end
-end, { silent = true })
-
-vim.keymap.set({ "i", "s" }, "<c-j>", function()
-	if ls.jumpable(-1) then
-		ls.jump(-1)
-	end
-end, { silent = true })
-
-local cmp = require("cmp")
-
-local cmp_mappings = lsp.defaults.cmp_mappings({
-	-- Disable <Tab> and <S-Tab>, as they conflict with GitHub Copilot
-	-- It is still possible to navigate with Arrow Up and Arrown Down
-	["<Tab>"] = cmp.config.disable,
-	["<S-Tab>"] = cmp.config.disable,
-	["<Enter>"] = cmp.mapping.confirm({ select = true }),
-	["<C-Space>"] = function()
-		if cmp.visible() then
-			cmp.close()
-		else
-			cmp.complete()
-		end
-	end,
+    vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+    vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+    vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
+    vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+    vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
+    vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+    vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+    vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+    vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
+    vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+  end
 })
+
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+local default_setup = function(server)
+  require('lspconfig')[server].setup({
+    capabilities = lsp_capabilities,
+  })
+end
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    default_setup,
+  },
+})
+
+local cmp = require('cmp')
 
 cmp.setup({
-	mapping = cmp_mappings,
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
-	sources = cmp.config.sources({
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" },
-	}, {
-		{ name = "buffer" },
-	}),
-	formatting = {
-		fields = { "kind", "abbr", "menu" },
+  sources = {
+    {name = 'nvim_lsp'},
+  },
+  mapping = cmp.mapping.preset.insert({
+    -- Enter key confirms completion item
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
 
-		format = function(entry, vim_item)
-			if vim.tbl_contains({ "path" }, entry.source.name) then
-				local icon, hl_group = require("nvim-web-devicons").get_icon(entry:get_completion_item().label)
-				if icon then
-					vim_item.kind = icon
-					vim_item.kind_hl_group = hl_group
-					return vim_item
-				end
-			end
-
-			local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
-			local strings = vim.split(kind.kind, "%s", { trimempty = true })
-			kind.kind = " " .. (strings[1] or "") .. " "
-			kind.menu = "    (" .. (strings[2] or "") .. ")"
-
-		end,
-	},
+    -- Ctrl + space triggers completion menu
+    ['<C-Space>'] = cmp.mapping.complete(),
+  }),
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  },
 })
 
-vim.diagnostic.config({
-	virtual_text = true,
-})

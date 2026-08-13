@@ -77,7 +77,7 @@
         "on-click": "pavucontrol"
     },
     "clock": {
-        "format": "{:%a %d. %b %I:%M %p}",
+        "format": "{:%a %d. %b %H:%M}",
         "tooltip-format": "<span size='12pt' font='SF Mono'>{calendar}</span>",
         "calendar": {
             "mode": "month",

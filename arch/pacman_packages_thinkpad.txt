@@ -23,17 +23,19 @@ fzf
 git
 gnome-calculator
 grim
+hunspell-en_us
 hypridle
 hyprland
 hyprlock
 hyprpicker
+img2pdf
 intel-ucode
 jq
 lazygit
 libnotify
+libspelling
 linux
 linux-firmware
-llama.cpp-vulkan
 localsend-bin
 loupe
 lutris
@@ -47,6 +49,7 @@ nautilus-open-any-terminal
 neovim
 networkmanager
 npm
+ntfsprogs
 nwg-look
 opencode
 otf-ipafont
@@ -58,6 +61,7 @@ pipewire-pulse
 polkit-gnome
 power-profiles-daemon
 python-pip
+python-pyspellchecker
 python-pywal
 rofi
 rofimoji
@@ -76,8 +80,9 @@ toimer-git
 tokyo-notes-git
 topgrade
 ttf-hack-nerd
-waybar
+waybar-git
 whitesur-icon-theme
+wine
 wtype
 xdg-desktop-portal-gtk
 xdg-user-dirs

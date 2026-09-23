@@ -1,10 +1,12 @@
 7zip
 alacritty
+android-tools
 arc-gtk-theme
 awww
 base
 base-devel
 bat
+bearbar-git
 blueman
 bluez
 bluez-utils
@@ -20,9 +22,11 @@ firefox
 fprintd
 fwupd
 fzf
+ggml-vulkan
 git
 gnome-calculator
 grim
+gtk4-layer-shell
 hunspell-en_us
 hypridle
 hyprland
@@ -36,6 +40,7 @@ libnotify
 libspelling
 linux
 linux-firmware
+llama-cpp
 localsend-bin
 loupe
 lutris
@@ -49,6 +54,7 @@ nautilus-open-any-terminal
 neovim
 networkmanager
 npm
+ntfs-3g
 ntfsprogs
 nwg-look
 opencode
@@ -80,7 +86,6 @@ toimer-git
 tokyo-notes-git
 topgrade
 ttf-hack-nerd
-waybar-git
 whitesur-icon-theme
 wine
 wtype

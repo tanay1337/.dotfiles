@@ -1,0 +1,62 @@
+[bar]
+position = "top"
+height = 28
+outputs = ["*"]
+
+[modules]
+start = ["workspaces"]
+center = []
+end = ["privacy", "tray", "submap", "control_center", "hardware", "volume", "clock"]
+
+[focused]
+show_class = true
+show_title = true
+max_chars = 48
+
+[media]
+show_artist = true
+max_chars = 38
+
+[control_center]
+icon = "􀜓"
+show_network_name = false
+
+[workspaces]
+persistent = [1, 2, 3, 4]
+all_outputs = false
+show_special = false
+scroll = false
+# When true, clicking a workspace moves it to the bar's monitor before focusing.
+move_to_current_monitor = false
+inactive_icon = "􀀁"
+active_icon = "􀧒"
+
+[clock]
+format = "%a %d. %b %H:%M"
+tooltip_format = "%A, %d %B %Y · %H:%M:%S %Z"
+calendar = true
+
+[volume]
+show_percentage = true
+scroll_step = 0.02
+# PulseAudio permits amplification; use up to 1.5 if desired.
+max_volume = 1.0
+icons = ["􀊥", "􀊧", "􀊩"]
+muted_icon = "􀊣"
+bluetooth_icon = ""
+
+[battery]
+show_percentage = true
+warning = 30
+critical = 15
+hide_when_absent = true
+icons = ["􀛪", "􀛩", "􀺶", "􀺸", "􀛨"]
+charging_icon = "􀢋"
+
+[hardware]
+enabled = true
+reveal_on_hover = true
+transition_ms = 500
+temperature_icons = ["􁏃", "􀇬", "􁏄"]
+memory_icon = "􀧖"
+cpu_icon = "􀫥"

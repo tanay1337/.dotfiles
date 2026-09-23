@@ -1,0 +1,101 @@
+/* Loaded after Bearbar's embedded defaults. GTK 4.20+ supports CSS variables. */
+* {
+  --bearbar-bg: rgba(17, 17, 27, 0.80);
+  --bearbar-fg: #cdd6f4;
+  --bearbar-muted: rgba(205, 214, 244, 0.58);
+  --bearbar-accent: #89b4fa;
+  --bearbar-warning: #f9e2af;
+  --bearbar-critical: #f38ba8;
+}
+
+#bar {
+  padding: 0 7px;
+  border-bottom: 0;
+  font-family: "SF Pro", "SF Pro Display", Inter, sans-serif;
+  font-size: 13.4px;
+}
+
+#bar.edge-left,
+#bar.edge-right {
+  padding: 7px 0;
+}
+
+#bar.edge-left .module,
+#bar.edge-left button.module,
+#bar.edge-right .module,
+#bar.edge-right button.module {
+  margin: 2px 0;
+  padding: 0 3px;
+}
+
+.popover-contents {
+  font-family: "SF Pro", "SF Pro Display", Inter, sans-serif;
+}
+
+#workspaces {
+  margin: 0 2px;
+  padding: 0;
+}
+
+#workspaces button.workspace {
+  min-width: 18px;
+  padding: 0 3px;
+  color: #cdd6f4;
+  border-radius: 999px;
+}
+
+.module,
+button.module {
+  margin: 0 0.15rem;
+  padding: 0 0.5rem;
+}
+
+#workspaces button.workspace.active {
+  color: #89b4fa;
+  background: transparent;
+}
+
+#workspaces button.workspace:hover {
+  color: #1e1e2e;
+  background-color: #cdd6f4;
+}
+
+#clock {
+  padding: 0 8.7px;
+  color: #f5c2e7;
+  font-weight: 400;
+}
+
+#clock .clock-label {
+  font-variant-numeric: normal;
+}
+
+#volume {
+  padding: 0 7.7px;
+  color: #94e2d5;
+  font-weight: 400;
+}
+
+#battery {
+  padding: 0 8.2px;
+  color: #cba6f7;
+  font-weight: 400;
+}
+
+#volume .module-icon,
+#battery .module-icon {
+  font-size: 13.4px;
+  font-weight: 400;
+}
+
+#temperature {
+  color: #89b4fa;
+}
+
+#memory {
+  color: #cba6f7;
+}
+
+#cpu {
+  color: #d793a0;
+}

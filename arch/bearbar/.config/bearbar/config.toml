@@ -6,7 +6,7 @@ outputs = ["*"]
 [modules]
 start = ["workspaces"]
 center = []
-end = ["privacy", "tray", "submap", "control_center", "hardware", "volume", "clock"]
+end = ["privacy", "hardware", "volume", "clock"]
 
 [focused]
 show_class = true

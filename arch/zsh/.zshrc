@@ -4,7 +4,7 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 
-plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions git-open)
+plugins=(git node npm zsh-syntax-highlighting zsh-autosuggestions git-open)
 
 source $ZSH/oh-my-zsh.sh
 

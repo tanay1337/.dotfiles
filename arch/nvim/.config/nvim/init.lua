@@ -1,5 +1,6 @@
-require("plugins")
-require("settings")
-require("keybindings")
-require("lsp")
-require("nvim-lualine")
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+require("config.lazy")
+require("options")
+require("keymaps")

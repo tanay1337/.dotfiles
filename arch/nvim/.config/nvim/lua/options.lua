@@ -8,7 +8,7 @@ opt.relativenumber = true
 opt.scrolloff = 8
 
 -- Tree style view for netrw
-vim.cmd("let g:netrw_liststyle = 3")
+vim.g.netrw_liststyle = 3
 
 -- How tabs behave
 opt.tabstop = 2
@@ -27,8 +27,16 @@ opt.termguicolors = true
 
 opt.mouse = "a"
 
--- Format on save
-vim.cmd([[autocmd BufWritePre * undojoin | Neoformat ]])
+-- Format on save, skipping buffers that can't be edited
+local format_on_save = vim.api.nvim_create_augroup("FormatOnSave", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+	group = format_on_save,
+	callback = function()
+		if vim.bo.modifiable and vim.bo.filetype ~= "" then
+			vim.cmd("silent! undojoin | Neoformat")
+		end
+	end,
+})
 
 -- Theme
-vim.cmd[[colorscheme tokyonight-moon]]
+vim.cmd([[colorscheme tokyonight-moon]])

@@ -32,9 +32,11 @@ hypridle
 hyprland
 hyprlock
 hyprpicker
+hyprsunset
 img2pdf
 intel-ucode
 jq
+kdenlive
 lazygit
 libnotify
 libspelling
@@ -92,6 +94,7 @@ wtype
 xdg-desktop-portal-gtk
 xdg-user-dirs
 yay
+yt-dlp
 zoxide
 zsh
 zsh-theme-powerlevel10k-git

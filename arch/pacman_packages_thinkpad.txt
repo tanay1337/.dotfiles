@@ -1,7 +1,6 @@
 7zip
 alacritty
 android-tools
-arc-gtk-theme
 awww
 base
 base-devel
@@ -70,13 +69,13 @@ polkit-gnome
 power-profiles-daemon
 python-pip
 python-pyspellchecker
-python-pywal
 rofi
 rofimoji
 rose-pine-hyprcursor
 slack-desktop
 slurp
 sof-firmware
+starship
 steam
 stow
 swappy
@@ -97,4 +96,3 @@ yay
 yt-dlp
 zoxide
 zsh
-zsh-theme-powerlevel10k-git

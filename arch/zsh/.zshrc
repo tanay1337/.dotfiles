@@ -23,4 +23,18 @@ eval "$(zoxide init zsh)"
 
 export PATH="$PATH:/home/tanay/.local/bin"
 
+# Hack to avoid the Starship newline on new terminal window
+
+_add_newline_after_command() {
+    if [[ -n "$_zsh_prompt_initialized" ]]; then
+        echo
+    else
+        _zsh_prompt_initialized=1
+    fi
+}
+
+precmd_functions+=(_add_newline_after_command)
+
+# End of hack
+
 eval "$(starship init zsh)"

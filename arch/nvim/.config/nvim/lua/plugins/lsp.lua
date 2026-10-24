@@ -1,11 +1,9 @@
 -- LSP, completion, and snippets
 return {
 	{
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v2.x",
+		"neovim/nvim-lspconfig",
 		dependencies = {
 			-- LSP support
-			"neovim/nvim-lspconfig",
 			{
 				"williamboman/mason.nvim",
 				build = function()
@@ -26,16 +24,21 @@ return {
 			"onsails/lspkind-nvim",
 		},
 		config = function()
-			local lsp = require("lsp-zero")
+			-- Capabilities for every server (completions, snippets) before any start
+			vim.lsp.config("*", {
+				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			})
 
-			lsp.preset("recommended")
-			lsp.nvim_workspace()
-			lsp.set_preferences({ suggest_lsp_servers = false })
-			lsp.set_sign_icons({
-				error = "✘",
-				warn = "▲",
-				hint = "⚑",
-				info = "»",
+			-- Diagnostic signs
+			vim.diagnostic.config({
+				signs = {
+					text = {
+						[vim.diagnostic.severity.ERROR] = "✘",
+						[vim.diagnostic.severity.WARN] = "▲",
+						[vim.diagnostic.severity.HINT] = "⚑",
+						[vim.diagnostic.severity.INFO] = "»",
+					},
+				},
 			})
 
 			-- Diagnostics are global (not tied to a server)
@@ -63,18 +66,16 @@ return {
 				end,
 			})
 
-			-- Install the servers used most often
+			-- Mason manages installation; mason-lspconfig v2 enables installed
+			-- servers automatically (automatic_enable defaults to true), both at
+			-- startup and after any future install.
 			require("mason").setup()
 			require("mason-lspconfig").setup({
 				ensure_installed = { "lua_ls", "eslint", "rust_analyzer" },
-				handlers = {
-					function(server)
-						require("lspconfig")[server].setup({
-							capabilities = require("cmp_nvim_lsp").default_capabilities(),
-						})
-					end,
-				},
 			})
+
+			-- Offer to install servers matching the current filetype
+			require("config.lsp-suggest").setup()
 
 			-- Completion
 			require("luasnip.loaders.from_vscode").lazy_load()
@@ -83,6 +84,8 @@ return {
 
 			cmp.setup({
 				sources = {
+					-- Lazydev: nvim API completions while editing Lua config files
+					{ name = "lazydev", groupIndex = 0 },
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "buffer" },
@@ -104,5 +107,15 @@ return {
 				}),
 			})
 		end,
+	},
+	{
+		-- vim.* API completion when editing Neovim config (replaces lsp-zero's nvim_workspace)
+		"folke/lazydev.nvim",
+		ft = "lua",
+		opts = {
+			library = {
+				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+			},
+		},
 	},
 }

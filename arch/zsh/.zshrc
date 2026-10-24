@@ -17,11 +17,8 @@ bindkey -s ^g "lazygit\n"
 
 export EDITOR=nvim
 export VISUAL="$EDITOR"
-export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
-
-eval "$(zoxide init zsh)"
-
-export PATH="$PATH:/home/tanay/.local/bin"
+export XCURSOR_PATH=${XCURSOR_PATH}:$HOME/.local/share/icons
+export PATH="$PATH:$HOME/.local/bin"
 
 # Hack to avoid the Starship newline on new terminal window
 
@@ -37,4 +34,5 @@ precmd_functions+=(_add_newline_after_command)
 
 # End of hack
 
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

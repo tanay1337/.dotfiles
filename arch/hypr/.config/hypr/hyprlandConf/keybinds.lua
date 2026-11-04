@@ -18,6 +18,7 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("tokyo-notes"))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("rofimoji --skin-tone neutral --selector-args='-theme ~/.config/rofi/config-emoji.rasi' --hidden-descriptions"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.local/bin/./powermenu"))
+hl.bind("ALT + TAB", hl.dsp.exec_cmd("rofi -show window"))
 
 -- Commands
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("systemctl sleep"))

@@ -16,6 +16,5 @@ else
 fi
 
 awww img -o $focused_monitor ${wallpaper} --transition-type any
-wal -s -e -i ${wallpaper}
 sleep 1
 ~/.local/bin/./wallpaper_hyprlock 

@@ -18,8 +18,8 @@ configuration {
 	dpi:						1;
 }
 
-/* ---- Load wallust colors ---- */
-@theme "~/.cache/wal/colors-rofi-dark.rasi"
+/* ---- Load colors ---- */
+@theme "colors-rofi-dark.rasi"
 
 /* ---- Global Properties ---- */
 * {

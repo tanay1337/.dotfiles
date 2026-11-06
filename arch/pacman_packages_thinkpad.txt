@@ -35,7 +35,6 @@ hyprsunset
 img2pdf
 intel-ucode
 jq
-kdenlive
 lazygit
 libnotify
 libspelling
@@ -72,6 +71,7 @@ python-pyspellchecker
 rofi
 rofimoji
 rose-pine-hyprcursor
+shotcut
 slack-desktop
 slurp
 sof-firmware
